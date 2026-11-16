@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" fill="none">
+  <rect width="64" height="64" rx="16" fill="#FDF8FA"/>
+  <rect x="2" y="2" width="60" height="60" rx="14" stroke="#B45474" stroke-width="2.2"/>
+  <!-- Luxury Beauty Mirror Arch, Lotus Petal & Sparkle Crest -->
+  <path d="M18 46V27C18 19.268 24.268 13 32 13C39.732 13 46 19.268 46 27V46" stroke="#B45474" stroke-width="2.2" stroke-linecap="round"/>
+  <path d="M32 21C28.5 25.5 27 29.5 32 34C37 29.5 35.5 25.5 32 21Z" stroke="#22151D" stroke-width="2" stroke-linejoin="round"/>
+  <path d="M22 44C24.8 39 28.2 36.8 32 36.8C35.8 36.8 39.2 39 42 44" stroke="#B45474" stroke-width="2" stroke-linecap="round"/>
+  <path d="M32 7L33.2 9.8L36 11L33.2 12.2L32 15L30.8 12.2L28 11L30.8 9.8L32 7Z" fill="#B45474"/>
+</svg>

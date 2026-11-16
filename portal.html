@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Dashboard Portal | Aurelia Academy Beautician Training</title>
+  <meta name="description" content="Student Dashboard Portal for Aurelia Academy — manage batch schedules, record practical logs, view graded model portfolios, and download accredited certificates.">
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5.3 CSS & Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+
+  <!-- Custom Studio Stylesheet -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- Mobile Sidebar Backdrop -->
+  <div id="sidebarBackdrop" class="sidebar-backdrop"></div>
+
+  <div class="dashboard-layout">
+    <!-- ======================================================================
+         FULL-HEIGHT LEFT SIDEBAR (TOP TO BOTTOM WITH LOGOUT BUTTON)
+         ====================================================================== -->
+    <aside id="dashboardSidebar" class="dashboard-sidebar" aria-label="Student Dashboard Menu">
+      <!-- Top: Brand Icon + Name & Primary Navigation -->
+      <div>
+        <a class="navbar-brand-luxury mb-4 pb-3 border-bottom d-flex" style="border-color: var(--border-subtle) !important;" href="index.html">
+          <svg class="brand-icon-svg" viewBox="0 0 64 64" fill="none" aria-hidden="true">
+            <rect x="2" y="2" width="60" height="60" rx="14" stroke="#B45474" stroke-width="2.2"/>
+            <path d="M18 46V27C18 19.268 24.268 13 32 13C39.732 13 46 19.268 46 27V46" stroke="#B45474" stroke-width="2.2" stroke-linecap="round"/>
+            <path d="M32 21C28.5 25.5 27 29.5 32 34C37 29.5 35.5 25.5 32 21Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+            <path d="M22 44C24.8 39 28.2 36.8 32 36.8C35.8 36.8 39.2 39 42 44" stroke="#B45474" stroke-width="2" stroke-linecap="round"/>
+            <path d="M32 7L33.2 9.8L36 11L33.2 12.2L32 15L30.8 12.2L28 11L30.8 9.8L32 7Z" fill="#B45474"/>
+          </svg>
+          <span class="brand-text-wrap">
+            <span class="brand-title" style="font-size: 1.25rem;">Aurelia Academy</span>
+            <span class="brand-sub">Student Portal</span>
+          </span>
+        </a>
+
+        <div class="mb-3 px-2">
+          <span class="small text-uppercase text-muted-luxury fw-semibold" style="font-size: 0.65rem; letter-spacing: 0.16em;">
+            Student Dashboard
+          </span>
+        </div>
+
+        <nav>
+          <button type="button" class="dashboard-nav-link active" data-tab="panel-overview">
+            <i class="bi bi-grid"></i>
+            <span>Overview</span>
+          </button>
+          <button type="button" class="dashboard-nav-link" data-tab="panel-book">
+            <i class="bi bi-calendar2-week"></i>
+            <span>Batch Schedules</span>
+          </button>
+          <button type="button" class="dashboard-nav-link" data-tab="panel-galleries">
+            <i class="bi bi-journal-check"></i>
+            <span>Practical Logs</span>
+          </button>
+          <button type="button" class="dashboard-nav-link" data-tab="panel-prints">
+            <i class="bi bi-award"></i>
+            <span>Certificates &amp; Kits</span>
+          </button>
+          <a href="index.html" class="dashboard-nav-link">
+            <i class="bi bi-arrow-left-circle"></i>
+            <span>Academy Website</span>
+          </a>
+        </nav>
+      </div>
+
+      <!-- Bottom: Theme/RTL Quick Controls + Logout Button -->
+      <div class="pt-3 border-top" style="border-color: var(--border-subtle) !important;">
+        <div class="d-flex align-items-center justify-content-between mb-3 px-1">
+          <span class="small text-muted-luxury">Appearance</span>
+          <div class="d-flex align-items-center gap-2">
+            <button type="button" class="theme-toggle-btn" aria-label="Toggle theme">
+              <i class="bi bi-moon-stars"></i>
+            </button>
+            <button type="button" class="rtl-toggle-btn" aria-label="Toggle RTL layout">RTL</button>
+          </div>
+        </div>
+
+        <a href="login.html" class="dashboard-logout-btn">
+          <i class="bi bi-box-arrow-left"></i>
+          <span>Logout</span>
+        </a>
+      </div>
+    </aside>
+
+    <!-- ======================================================================
+         MAIN STUDENT WORKSPACE
+         ====================================================================== -->
+    <main class="dashboard-main">
+      <!-- Top Workspace Header -->
+      <div class="d-flex flex-wrap justify-content-between align-items-center gap-3 pb-4 mb-4 border-bottom" style="border-color: var(--border-subtle) !important;">
+        <div>
+          <span class="small text-gold text-uppercase fw-semibold d-block" style="letter-spacing: 0.14em; font-size: 0.68rem;">
+            Student Academic Portal &bull; Roll ID #AA-2026-B4
+          </span>
+          <h1 class="h2 font-serif mb-0">Welcome, Ananya Sharma</h1>
+        </div>
+
+        <div class="d-flex align-items-center gap-2 ms-auto">
+          <span class="badge bg-surface border text-secondary-luxury px-3 py-2 fw-normal d-none d-lg-inline-block" style="border-color: var(--border-gold) !important;">
+            <i class="bi bi-patch-check-fill text-gold me-1"></i> Grand Master Cosmetology Diploma
+          </span>
+          <button type="button" class="rtl-toggle-btn d-none d-xl-inline-flex" aria-label="Toggle RTL layout">RTL</button>
+          <button type="button" class="theme-toggle-btn d-none d-xl-inline-flex" aria-label="Toggle theme">
+            <i class="bi bi-moon-stars"></i>
+          </button>
+          <button type="button" id="dashboardMenuToggle" class="btn btn-outline-secondary d-xl-none px-2 py-1" aria-label="Open side menu">
+            <i class="bi bi-list fs-4"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- ====================================================================
+           PANEL 1: OVERVIEW (BATCH SCHEDULES, PRACTICAL LOGS & CERTIFICATES)
+           ==================================================================== -->
+      <section id="panel-overview" class="dashboard-panel active">
+        <div class="row g-4 mb-4 justify-content-center">
+          <div class="col-md-6 col-xl-4">
+            <div class="dashboard-stat-card">
+              <span class="small text-uppercase text-muted-luxury d-block mb-1" style="letter-spacing: 0.12em; font-size: 0.7rem;">Active Batch Schedule</span>
+              <div class="font-serif fs-3 text-gold mb-1">Morning Batch B4</div>
+              <p class="small text-secondary-luxury mb-3">Mon – Fri &bull; 9:30 AM – 1:30 PM &bull; Vanity Lab 01</p>
+              <button type="button" class="btn-editorial-link" data-jump-tab="panel-book" style="background:none;border-top:0;border-left:0;border-right:0;">
+                <span>Manage Batch Schedule</span>
+                <i class="bi bi-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-xl-4">
+            <div class="dashboard-stat-card">
+              <span class="small text-uppercase text-muted-luxury d-block mb-1" style="letter-spacing: 0.12em; font-size: 0.7rem;">Verified Practical Logs</span>
+              <div class="font-serif fs-3 text-gold mb-1">420 / 600 Hrs Logged</div>
+              <p class="small text-secondary-luxury mb-3">
+                <strong id="favoritesCount">2</strong> practical model plates starred for graduation lookbook.
+              </p>
+              <button type="button" class="btn-editorial-link" data-jump-tab="panel-galleries" style="background:none;border-top:0;border-left:0;border-right:0;">
+                <span>Open Practical Logs</span>
+                <i class="bi bi-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-xl-4">
+            <div class="dashboard-stat-card">
+              <span class="small text-uppercase text-muted-luxury d-block mb-1" style="letter-spacing: 0.12em; font-size: 0.7rem;">Earned Certificates</span>
+              <div class="font-serif fs-3 text-gold mb-1">2 Modules Certified</div>
+              <p class="small text-secondary-luxury mb-3">Bridal HD Airbrush &amp; Dermal Hygiene QR-Verified.</p>
+              <button type="button" class="btn-editorial-link" data-jump-tab="panel-prints" style="background:none;border-top:0;border-left:0;border-right:0;">
+                <span>View Certificates &amp; Kits</span>
+                <i class="bi bi-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-12 col-xl-7">
+            <div class="dashboard-stat-card">
+              <h2 class="h4 font-serif mb-3">Upcoming Batch Classes &amp; Practical Exams</h2>
+              <div id="upcomingSessionsList" class="d-grid gap-3">
+                <div class="p-3 bg-ivory border rounded-1 d-flex justify-content-between align-items-center flex-wrap gap-2" style="border-color: var(--border-subtle) !important;">
+                  <div>
+                    <strong class="d-block font-serif fs-5">Module III: Hydra-Dermabrasion &amp; Chemical Peel Practical</strong>
+                    <span class="small text-muted-luxury">Nov 18, 2026 &bull; 9:30 AM &bull; Clinical Medi-Facial Ward 02</span>
+                  </div>
+                  <span class="badge bg-surface text-gold border" style="border-color: var(--border-gold) !important;">Scheduled</span>
+                </div>
+                <div class="p-3 bg-ivory border rounded-1 d-flex justify-content-between align-items-center flex-wrap gap-2" style="border-color: var(--border-subtle) !important;">
+                  <div>
+                    <strong class="d-block font-serif fs-5">Module II: Royal Bridal HD Airbrush Final Assessment</strong>
+                    <span class="small text-muted-luxury">Completed Nov 10, 2026 &bull; Grade: A+ Distinction (160 Hrs)</span>
+                  </div>
+                  <span class="badge bg-beige text-secondary-luxury border" style="border-color: var(--border-strong) !important;">Certified</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-xl-5">
+            <div class="dashboard-stat-card">
+              <h2 class="h4 font-serif mb-3">Master Educator Feedback &amp; Kit Notes</h2>
+              <p class="small text-secondary-luxury mb-3">
+                Dean Aurelia Varma: “Excellent blending on your silicone HD airbrush bridal exam, Ananya! For Thursday’s clinical peel lab, please bring your sterile disposable fan brushes, pH neutralizer spray, and clinical logbook.”
+              </p>
+              <a href="https://wa.me/919820456789?text=Hello%20Aurelia%20Academy%20Faculty%2C%20message%20from%20Student%20Portal." target="_blank" rel="noopener noreferrer" class="btn-luxury btn-luxury-outline w-100">
+                <i class="bi bi-whatsapp text-gold"></i>
+                <span>Message Faculty Mentor</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           PANEL 2: BATCH SCHEDULES & EXTRA MODEL LAB BOOKING
+           ==================================================================== -->
+      <section id="panel-book" class="dashboard-panel">
+        <div class="row g-4">
+          <div class="col-12 col-xl-7">
+            <div class="dashboard-stat-card p-4">
+              <span class="eyebrow">Batch Schedule &amp; Practice Bay</span>
+              <h2 class="h3 font-serif mb-2">Reserve Extra Practical Lab Slot or Catch-Up Batch</h2>
+              <p class="small text-secondary-luxury mb-4">
+                Book an illuminated vanity station, clinical facial bed, or portfolio cyclorama slot for extra live-model practice hours.
+              </p>
+
+              <div id="dashBookingFeedback" class="d-none p-3 mb-4 rounded-1 border bg-beige" style="border-color: var(--accent-gold) !important;">
+                <strong class="font-serif fs-5 d-block text-gold">Practical Lab Slot Added to Your Batch Schedule</strong>
+                <span class="small text-secondary-luxury">Your station and practice cosmetics kit have been reserved by the Lab Coordinator.</span>
+              </div>
+
+              <form id="dashboardBookingForm" novalidate>
+                <div class="row g-3">
+                  <div class="col-12">
+                    <label for="dashSessionType" class="form-label-luxury">Select Practical Module / Lab Session *</label>
+                    <select id="dashSessionType" class="form-select-luxury" required>
+                      <option value="">Choose practical module...</option>
+                      <option value="HD Silicone Airbrush &amp; Bridal Practice (4 Hrs)">HD Silicone Airbrush &amp; Bridal Practice (4 Hrs)</option>
+                      <option value="Clinical Hydra-Facial &amp; Peel Lab (4 Hrs)">Clinical Hydra-Facial &amp; Peel Lab (4 Hrs)</option>
+                      <option value="Hair Balayage &amp; Bridal Chignon Practice (3 Hrs)">Hair Balayage &amp; Bridal Chignon Practice (3 Hrs)</option>
+                      <option value="Russian E-File Manicure &amp; Gel Extension Lab (3 Hrs)">Russian E-File Manicure &amp; Gel Extension Lab (3 Hrs)</option>
+                    </select>
+                    <div class="invalid-feedback-luxury">Please choose a practical module.</div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <label for="dashSessionDate" class="form-label-luxury">Preferred Practice Date *</label>
+                    <input type="date" id="dashSessionDate" class="form-control-luxury" required>
+                    <div class="invalid-feedback-luxury">Please select a preferred date.</div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <label for="dashSessionLocation" class="form-label-luxury">Campus Lab &amp; Batch Shift</label>
+                    <select id="dashSessionLocation" class="form-select-luxury">
+                      <option value="Vanity Lab 01 (Morning 9:30 AM)">Vanity Lab 01 (Morning 9:30 AM)</option>
+                      <option value="Clinical Aesthetics Ward 02 (Afternoon 2:00 PM)">Clinical Aesthetics Ward 02 (Afternoon 2:00 PM)</option>
+                      <option value="Hair &amp; Nail Lounge (Weekend 10:00 AM)">Hair &amp; Nail Lounge (Weekend 10:00 AM)</option>
+                    </select>
+                  </div>
+
+                  <div class="col-12">
+                    <label for="dashNotes" class="form-label-luxury">Live Model &amp; Equipment Requirements</label>
+                    <textarea id="dashNotes" rows="3" class="form-control-luxury" placeholder="Specify if you need an academy model assigned, airbrush compressor #04, or Woods lamp skin analyzer..."></textarea>
+                  </div>
+
+                  <div class="col-12 pt-2">
+                    <button type="submit" class="btn-luxury btn-luxury-primary">
+                      <span>Add to Batch Schedule</span>
+                      <i class="bi bi-calendar-plus"></i>
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+
+          <div class="col-12 col-xl-5">
+            <div class="dashboard-stat-card p-4">
+              <h3 class="h4 font-serif mb-3">Semester Batch Curriculum Timeline</h3>
+              <ul class="small text-secondary-luxury d-grid gap-3">
+                <li class="pb-2 border-bottom" style="border-color: var(--border-subtle) !important;">
+                  <strong class="d-block text-gold">Weeks 1 – 6: Bridal &amp; Editorial Makeup</strong>
+                  <span>Color wheel, skin undertones, HD airbrush &amp; 8 bridal looks (Completed).</span>
+                </li>
+                <li class="pb-2 border-bottom" style="border-color: var(--border-subtle) !important;">
+                  <strong class="d-block text-gold">Weeks 7 – 12: Clinical Cosmetology &amp; Skin</strong>
+                  <span>Dermal anatomy, chemical peels, hydra-dermabrasion &amp; LED (In Progress).</span>
+                </li>
+                <li class="pb-2 border-bottom" style="border-color: var(--border-subtle) !important;">
+                  <strong class="d-block text-gold">Weeks 13 – 18: Hair Couture &amp; Nail Artistry</strong>
+                  <span>Balayage coloring, keratin smoothing &amp; builder gel extensions.</span>
+                </li>
+                <li>
+                  <strong class="d-block text-gold">Weeks 19 – 24: Portfolio Shoot &amp; Board Exam</strong>
+                  <span>6-Look cyclorama shoot, CIDESCO mock viva &amp; salon placement interviews.</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           PANEL 3: PRACTICAL LOGS & GRADED STUDENT WORK PORTFOLIO
+           ==================================================================== -->
+      <section id="panel-galleries" class="dashboard-panel">
+        <div class="d-flex flex-wrap justify-content-between align-items-end gap-3 mb-4">
+          <div>
+            <span class="eyebrow">Verified Practical Assessment Logbook</span>
+            <h2 class="h3 font-serif mb-1">Graded Practical Logs &amp; Model Portfolio</h2>
+            <p class="small text-secondary-luxury mb-0">
+              Tap the heart icon to shortlist your favorite practical plates for your graduation lookbook, or click any log to inspect examiner notes.
+            </p>
+          </div>
+          <button type="button" class="btn-luxury btn-luxury-gold" data-jump-tab="panel-prints">
+            <span>Download Certificates &amp; Transcripts</span>
+            <i class="bi bi-arrow-right"></i>
+          </button>
+        </div>
+
+        <div class="row g-4 justify-content-center">
+          <div class="col-md-6 col-xl-4">
+            <div class="dashboard-gallery-card">
+              <div class="gallery-card ratio-portrait" tabindex="0" role="button"
+                   data-title="Log #104 — Royal Bridal HD Airbrush (Grade: A+)"
+                   data-meta="Bridal Practical Exam • 24 Hours Logged"
+                   data-full="https://images.pexels.com/photos/2681751/pexels-photo-2681751.jpeg?auto=compress&cs=tinysrgb&w=1400">
+                <img src="https://images.pexels.com/photos/2681751/pexels-photo-2681751.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Royal bridal HD airbrush practical log">
+              </div>
+              <div class="p-3 d-flex justify-content-between align-items-center">
+                <div>
+                  <strong class="d-block font-serif fs-5">Log #104 — Bridal Airbrush</strong>
+                  <span class="small text-muted-luxury">24 Hrs &bull; Grade: A+ Distinction</span>
+                </div>
+                <button type="button" class="favorite-heart-btn liked" aria-label="Shortlist practical log">
+                  <i class="bi bi-heart-fill"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-xl-4">
+            <div class="dashboard-gallery-card">
+              <div class="gallery-card ratio-portrait" tabindex="0" role="button"
+                   data-title="Log #108 — Hydra-Dermabrasion &amp; Peel Protocol (Grade: A)"
+                   data-meta="Clinical Skincare Ward • 18 Hours Logged"
+                   data-full="https://images.pexels.com/photos/3757942/pexels-photo-3757942.jpeg?auto=compress&cs=tinysrgb&w=1400">
+                <img src="https://images.pexels.com/photos/3757942/pexels-photo-3757942.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Hydra-dermabrasion clinical practical log">
+              </div>
+              <div class="p-3 d-flex justify-content-between align-items-center">
+                <div>
+                  <strong class="d-block font-serif fs-5">Log #108 — Hydra-Facial Lab</strong>
+                  <span class="small text-muted-luxury">18 Hrs &bull; Grade: A Verified</span>
+                </div>
+                <button type="button" class="favorite-heart-btn liked" aria-label="Shortlist practical log">
+                  <i class="bi bi-heart-fill"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-xl-4">
+            <div class="dashboard-gallery-card">
+              <div class="gallery-card ratio-portrait" tabindex="0" role="button"
+                   data-title="Log #115 — Editorial Cut-Crease &amp; Graphic Liner (Grade: A+)"
+                   data-meta="Editorial Makeup Faculty • 16 Hours Logged"
+                   data-full="https://images.pexels.com/photos/457701/pexels-photo-457701.jpeg?auto=compress&cs=tinysrgb&w=1400">
+                <img src="https://images.pexels.com/photos/457701/pexels-photo-457701.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Editorial eye makeup practical log">
+              </div>
+              <div class="p-3 d-flex justify-content-between align-items-center">
+                <div>
+                  <strong class="d-block font-serif fs-5">Log #115 — Editorial Eye</strong>
+                  <span class="small text-muted-luxury">16 Hrs &bull; Grade: A+ Distinction</span>
+                </div>
+                <button type="button" class="favorite-heart-btn" aria-label="Shortlist practical log">
+                  <i class="bi bi-heart"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-xl-4">
+            <div class="dashboard-gallery-card">
+              <div class="gallery-card ratio-portrait" tabindex="0" role="button"
+                   data-title="Log #201 — Parisian Bridal Chignon &amp; Texturing (Grade: A)"
+                   data-meta="Hair Couture Lounge • 20 Hours Logged"
+                   data-full="https://images.pexels.com/photos/3993449/pexels-photo-3993449.jpeg?auto=compress&cs=tinysrgb&w=1400">
+                <img src="https://images.pexels.com/photos/3993449/pexels-photo-3993449.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Bridal hair chignon practical log">
+              </div>
+              <div class="p-3 d-flex justify-content-between align-items-center">
+                <div>
+                  <strong class="d-block font-serif fs-5">Log #201 — Bridal Chignon</strong>
+                  <span class="small text-muted-luxury">20 Hrs &bull; Grade: A Verified</span>
+                </div>
+                <button type="button" class="favorite-heart-btn" aria-label="Shortlist practical log">
+                  <i class="bi bi-heart"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-xl-4">
+            <div class="dashboard-gallery-card">
+              <div class="gallery-card ratio-portrait" tabindex="0" role="button"
+                   data-title="Log #209 — Hard Gel Nail Extension &amp; Chrome Art (Grade: A+)"
+                   data-meta="Nail Architecture Bar • 14 Hours Logged"
+                   data-full="https://images.pexels.com/photos/3997379/pexels-photo-3997379.jpeg?auto=compress&cs=tinysrgb&w=1400">
+                <img src="https://images.pexels.com/photos/3997379/pexels-photo-3997379.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Gel nail extension practical log">
+              </div>
+              <div class="p-3 d-flex justify-content-between align-items-center">
+                <div>
+                  <strong class="d-block font-serif fs-5">Log #209 — Gel Extensions</strong>
+                  <span class="small text-muted-luxury">14 Hrs &bull; Grade: A+ Distinction</span>
+                </div>
+                <button type="button" class="favorite-heart-btn" aria-label="Shortlist practical log">
+                  <i class="bi bi-heart"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-xl-4">
+            <div class="dashboard-gallery-card">
+              <div class="gallery-card ratio-portrait" tabindex="0" role="button"
+                   data-title="Log #214 — Ultrasonic &amp; LED Barrier Therapy (Grade: A)"
+                   data-meta="Dermal Science Lab • 22 Hours Logged"
+                   data-full="https://images.pexels.com/photos/3997993/pexels-photo-3997993.jpeg?auto=compress&cs=tinysrgb&w=1400">
+                <img src="https://images.pexels.com/photos/3997993/pexels-photo-3997993.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Ultrasonic skin therapy practical log">
+              </div>
+              <div class="p-3 d-flex justify-content-between align-items-center">
+                <div>
+                  <strong class="d-block font-serif fs-5">Log #214 — Ultrasonic Facial</strong>
+                  <span class="small text-muted-luxury">22 Hrs &bull; Grade: A Verified</span>
+                </div>
+                <button type="button" class="favorite-heart-btn" aria-label="Shortlist practical log">
+                  <i class="bi bi-heart"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           PANEL 4: CERTIFICATES, TRANSCRIPTS & STUDENT PRO KIT ORDERS
+           ==================================================================== -->
+      <section id="panel-prints" class="dashboard-panel">
+        <div class="row g-4">
+          <div class="col-12 col-xl-8">
+            <div class="dashboard-stat-card p-4">
+              <span class="eyebrow">Academic Registrar &amp; Pro Store</span>
+              <h2 class="h3 font-serif mb-2">Official Certificates, Transcripts &amp; Student Kit Orders</h2>
+              <p class="small text-secondary-luxury mb-4">
+                Your digital certificates are ready below. You can also order hardcopy gold-embossed diploma scrolls, international apostille transcripts, or pro vanity kit refills.
+              </p>
+
+              <!-- Issued Digital Certificates Strip -->
+              <div class="row g-3 mb-4">
+                <div class="col-md-6">
+                  <div class="p-3 bg-beige border rounded-1 h-100 d-flex flex-column justify-content-between" style="border-color: var(--border-gold) !important;">
+                    <div>
+                      <span class="badge bg-surface text-gold border mb-2" style="border-color: var(--border-gold) !important;"><i class="bi bi-patch-check-fill me-1"></i>QR Verified #CERT-8841</span>
+                      <h3 class="h5 font-serif mb-1">Master Bridal &amp; HD Airbrush Certificate</h3>
+                      <p class="small text-secondary-luxury mb-2">Issued Nov 10, 2026 &bull; 160 Practical Hours &bull; Grade: A+ Distinction</p>
+                    </div>
+                    <span class="small text-gold fw-semibold"><i class="bi bi-shield-check me-1"></i>Digitally Signed by Dean Aurelia Varma</span>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="p-3 bg-beige border rounded-1 h-100 d-flex flex-column justify-content-between" style="border-color: var(--border-gold) !important;">
+                    <div>
+                      <span class="badge bg-surface text-gold border mb-2" style="border-color: var(--border-gold) !important;"><i class="bi bi-patch-check-fill me-1"></i>QR Verified #CERT-8790</span>
+                      <h3 class="h5 font-serif mb-1">Clinical Dermal Hygiene &amp; Safety Charter</h3>
+                      <p class="small text-secondary-luxury mb-2">Issued Oct 18, 2026 &bull; 80 Clinical Hours &bull; Grade: A+ Distinction</p>
+                    </div>
+                    <span class="small text-gold fw-semibold"><i class="bi bi-shield-check me-1"></i>ISO &amp; CIDESCO Standard Verified</span>
+                  </div>
+                </div>
+              </div>
+
+              <div id="printOrderFeedback" class="d-none p-3 mb-4 rounded-1 border bg-beige" style="border-color: var(--accent-gold) !important;">
+                <strong class="font-serif fs-5 d-block text-gold">Registrar &amp; Pro Kit Request Submitted</strong>
+                <span id="printOrderSummaryText" class="small text-secondary-luxury"></span>
+              </div>
+
+              <form id="printOrderForm">
+                <div class="d-grid gap-3 mb-4">
+                  <div class="p-3 bg-ivory border rounded-1 d-flex justify-content-between align-items-center flex-wrap gap-3" style="border-color: var(--border-subtle) !important;">
+                    <div>
+                      <strong class="d-block font-serif fs-5">Framed Gold-Foil Embossed Hardcopy Diploma Scroll</strong>
+                      <span class="small text-muted-luxury">Holographic seal &amp; solid rosewood frame for your salon wall &bull; ₹3,500 each</span>
+                    </div>
+                    <input type="number" min="0" max="10" value="1" class="form-control-luxury print-qty-input" data-price="3500" style="width: 90px;" aria-label="Diploma scroll quantity">
+                  </div>
+
+                  <div class="p-3 bg-ivory border rounded-1 d-flex justify-content-between align-items-center flex-wrap gap-3" style="border-color: var(--border-subtle) !important;">
+                    <div>
+                      <strong class="d-block font-serif fs-5">24-Piece Pro Makeup &amp; Vegan Sable Brush Kit</strong>
+                      <span class="small text-muted-luxury">Student subsidised take-home vanity kit &bull; ₹12,500 each</span>
+                    </div>
+                    <input type="number" min="0" max="20" value="1" class="form-control-luxury print-qty-input" data-price="12500" style="width: 90px;" aria-label="Pro brush kit quantity">
+                  </div>
+
+                  <div class="p-3 bg-ivory border rounded-1 d-flex justify-content-between align-items-center flex-wrap gap-3" style="border-color: var(--border-subtle) !important;">
+                    <div>
+                      <strong class="d-block font-serif fs-5">Printed 10&times;10" Graduation Portfolio Lookbook</strong>
+                      <span class="small text-muted-luxury">20 layflat pages showcasing your graded student work &bull; ₹4,500 per book</span>
+                    </div>
+                    <input type="number" min="0" max="20" value="0" class="form-control-luxury print-qty-input" data-price="4500" style="width: 90px;" aria-label="Portfolio lookbook quantity">
+                  </div>
+
+                  <div class="p-3 bg-ivory border rounded-1 d-flex justify-content-between align-items-center flex-wrap gap-3" style="border-color: var(--border-subtle) !important;">
+                    <div>
+                      <strong class="d-block font-serif fs-5">International Employer Transcript &amp; Verification Pack</strong>
+                      <span class="small text-muted-luxury">Sealed clinical hour logbook transcript for overseas salons &bull; ₹2,500 each</span>
+                    </div>
+                    <input type="number" min="0" max="10" value="0" class="form-control-luxury print-qty-input" data-price="2500" style="width: 90px;" aria-label="Transcript pack quantity">
+                  </div>
+                </div>
+
+                <div class="d-flex flex-wrap justify-content-between align-items-center gap-3 pt-3 border-top" style="border-color: var(--border-subtle) !important;">
+                  <div>
+                    <span class="small text-muted-luxury text-uppercase d-block" style="letter-spacing: 0.12em;">Estimated Order Total</span>
+                    <strong id="printOrderTotal" class="font-serif fs-2 text-gold">₹16,000</strong>
+                  </div>
+                  <button type="submit" class="btn-luxury btn-luxury-primary">
+                    <span>Submit Registrar Order</span>
+                    <i class="bi bi-check2-circle"></i>
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+
+          <div class="col-12 col-xl-4">
+            <div class="dashboard-stat-card p-4">
+              <h3 class="h4 font-serif mb-3">Global QR Certificate Verification</h3>
+              <div class="photo-frame ratio-landscape mb-3">
+                <img src="https://images.pexels.com/photos/2113855/pexels-photo-2113855.jpeg?auto=compress&cs=tinysrgb&w=700" alt="Aurelia Academy pro makeup vanity and certification seal">
+              </div>
+              <p class="small text-secondary-luxury mb-0">
+                Every certificate issued by Aurelia Academy features a unique cryptographic QR code and embossed gold seal, allowing luxury salons, medical spas, and international licensing boards to verify your logged practical hours instantly.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <!-- Lightbox Modal for Dashboard Practical Log Preview -->
+  <div id="studioLightbox" class="studio-lightbox" role="dialog" aria-modal="true" aria-hidden="true" aria-label="Image Lightbox">
+    <button type="button" id="lightboxClose" class="lightbox-close" aria-label="Close lightbox">
+      <i class="bi bi-x-lg"></i>
+    </button>
+    <button type="button" id="lightboxPrev" class="lightbox-nav lightbox-prev" aria-label="Previous image">
+      <i class="bi bi-chevron-left"></i>
+    </button>
+    <button type="button" id="lightboxNext" class="lightbox-nav lightbox-next" aria-label="Next image">
+      <i class="bi bi-chevron-right"></i>
+    </button>
+
+    <div class="lightbox-inner">
+      <div class="lightbox-img-container">
+        <img id="lightboxImage" src="" alt="Expanded student practical work">
+      </div>
+      <div class="lightbox-caption-bar">
+        <span id="lightboxMeta" class="d-block small text-uppercase text-gold mb-1" style="letter-spacing: 0.16em; font-size: 0.7rem;"></span>
+        <h3 id="lightboxTitle" class="h3 font-serif text-white mb-1"></h3>
+        <span id="lightboxCounter" class="small opacity-75"></span>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
+
