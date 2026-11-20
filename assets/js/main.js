@@ -36,7 +36,7 @@
       );
       btn.setAttribute(
         'title',
-        theme === 'dark' ? 'Switch to Pearl Blush Light Mode' : 'Switch to Velvet Plum Dark Mode'
+        theme === 'dark' ? 'Switch to Botanical Ivory Light Mode' : 'Switch to Emerald Noir Dark Mode'
       );
     });
   }
@@ -127,22 +127,16 @@
       });
     }
 
-    // Desktop Hover + Click compatibility for Home Dropdown
+    // Desktop Click & Hover Dropdown Compatibility (avoid click/hover state conflict)
     document.querySelectorAll('.studio-navbar .nav-item.dropdown').forEach((item) => {
       const toggle = item.querySelector('.dropdown-toggle');
       const menu = item.querySelector('.dropdown-menu');
       if (!toggle || !menu) return;
 
-      item.addEventListener('mouseenter', function () {
-        if (window.innerWidth >= 1200) {
-          menu.classList.add('show');
-          toggle.setAttribute('aria-expanded', 'true');
-        }
-      });
-
       item.addEventListener('mouseleave', function () {
         if (window.innerWidth >= 1200) {
           menu.classList.remove('show');
+          toggle.classList.remove('show');
           toggle.setAttribute('aria-expanded', 'false');
         }
       });
@@ -159,15 +153,15 @@
         const svgPlaceholder = `<svg xmlns="http://www.w3.org/2000/svg" width="900" height="1100" viewBox="0 0 900 1100">
           <defs>
             <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stop-color="#FDF8FA"/>
-              <stop offset="50%" stop-color="#F5EAF0"/>
-              <stop offset="100%" stop-color="#E5B8C8"/>
+              <stop offset="0%" stop-color="#F7FAF8"/>
+              <stop offset="50%" stop-color="#EBF2EE"/>
+              <stop offset="100%" stop-color="#C59B5F"/>
             </linearGradient>
           </defs>
           <rect width="900" height="1100" fill="url(#g)"/>
-          <rect x="45" y="45" width="810" height="1010" fill="none" stroke="#B45474" stroke-width="1.5" stroke-opacity="0.45"/>
-          <text x="450" y="540" text-anchor="middle" font-family="Georgia, serif" font-size="28" fill="#5C4352" font-style="italic">Aurelia Academy</text>
-          <text x="450" y="585" text-anchor="middle" font-family="sans-serif" font-size="14" letter-spacing="3" fill="#8A6D7E">${altText.slice(0, 42).toUpperCase()}</text>
+          <rect x="45" y="45" width="810" height="1010" fill="none" stroke="#1B6B52" stroke-width="1.5" stroke-opacity="0.45"/>
+          <text x="450" y="540" text-anchor="middle" font-family="Georgia, serif" font-size="28" fill="#10241B" font-style="italic">Aurelia Academy</text>
+          <text x="450" y="585" text-anchor="middle" font-family="sans-serif" font-size="14" letter-spacing="3" fill="#355245">${altText.slice(0, 42).toUpperCase()}</text>
         </svg>`;
         this.src = 'data:image/svg+xml;charset=UTF-8,' + encodeURIComponent(svgPlaceholder);
       });

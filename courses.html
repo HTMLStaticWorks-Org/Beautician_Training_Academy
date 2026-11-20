@@ -10,7 +10,7 @@
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300..700;1,9..40,400&family=Playfair+Display:ital,wght@0,400..700;1,400..600&display=swap" rel="stylesheet">
 
   <!-- Bootstrap 5.3 CSS & Bootstrap Icons -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -29,11 +29,17 @@
       <div class="container">
         <a class="navbar-brand-luxury" href="index.html">
           <svg class="brand-icon-svg" viewBox="0 0 64 64" fill="none" aria-hidden="true">
-            <rect x="2" y="2" width="60" height="60" rx="14" stroke="#B45474" stroke-width="2.2"/>
-            <path d="M18 46V27C18 19.268 24.268 13 32 13C39.732 13 46 19.268 46 27V46" stroke="#B45474" stroke-width="2.2" stroke-linecap="round"/>
-            <path d="M32 21C28.5 25.5 27 29.5 32 34C37 29.5 35.5 25.5 32 21Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
-            <path d="M22 44C24.8 39 28.2 36.8 32 36.8C35.8 36.8 39.2 39 42 44" stroke="#B45474" stroke-width="2" stroke-linecap="round"/>
-            <path d="M32 7L33.2 9.8L36 11L33.2 12.2L32 15L30.8 12.2L28 11L30.8 9.8L32 7Z" fill="#B45474"/>
+            <circle cx="32" cy="32" r="29" stroke="var(--accent-gold, #1B6B52)" stroke-width="2.2"/>
+            <circle cx="32" cy="32" r="25" stroke="var(--accent-rose, #C59B5F)" stroke-width="1" stroke-opacity="0.55"/>
+            <path d="M20.5 31C16.8 26.2 17.2 18.2 24 16.2C30.8 18.2 31.2 26.2 27.5 31Z" fill="var(--accent-rose, #C59B5F)" fill-opacity="0.22" stroke="var(--accent-gold, #1B6B52)" stroke-width="2" stroke-linejoin="round"/>
+            <path d="M22.2 21.5V28.5M25.8 21.5V28.5" stroke="var(--accent-gold, #1B6B52)" stroke-width="1.5" stroke-linecap="round"/>
+            <rect x="20.5" y="31" width="7" height="3.8" rx="1" stroke="var(--accent-rose, #C59B5F)" stroke-width="1.8"/>
+            <path d="M21.2 34.8H26.8L25.6 48.2C25.5 49.2 22.5 49.2 22.4 48.2Z" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round"/>
+            <path d="M37 29.5V20.5L43 16.5V29.5Z" fill="var(--accent-gold, #1B6B52)" fill-opacity="0.88" stroke="var(--accent-gold, #1B6B52)" stroke-width="1.6" stroke-linejoin="round"/>
+            <rect x="36" y="29.5" width="8" height="4.2" rx="0.8" stroke="var(--accent-rose, #C59B5F)" stroke-width="1.8"/>
+            <rect x="35" y="33.7" width="10" height="15" rx="2" stroke="currentColor" stroke-width="1.9"/>
+            <path d="M32 8.5L33.1 11.1L35.7 12.2L33.1 13.3L32 15.9L30.9 13.3L28.3 12.2L30.9 11.1Z" fill="var(--accent-rose, #C59B5F)"/>
+            <path d="M20 52H44" stroke="var(--accent-rose, #C59B5F)" stroke-width="1.5" stroke-linecap="round" opacity="0.7"/>
           </svg>
           <span class="brand-text-wrap">
             <span class="brand-title">Aurelia Academy</span>
@@ -48,24 +54,24 @@
 
         <div class="collapse navbar-collapse" id="studioNavbarCollapse">
           <ul class="navbar-nav mx-auto">
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="index.html" id="homeDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <li class="nav-item dropdown d-none d-xl-block">
+              <a class="nav-link dropdown-toggle" href="index.html" id="homeDropdown" role="button" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false">
                 Home
               </a>
               <ul class="dropdown-menu" aria-labelledby="homeDropdown">
                 <li>
-                  <a class="dropdown-item" href="index.html">
-                    <span>Home 1 — Editorial Academy</span>
-                    <span class="demo-tag">01</span>
-                  </a>
+                  <a class="dropdown-item" href="index.html">Home 1</a>
                 </li>
                 <li>
-                  <a class="dropdown-item" href="home-2.html">
-                    <span>Home 2 — Couture Lookbook</span>
-                    <span class="demo-tag">02</span>
-                  </a>
+                  <a class="dropdown-item" href="home-2.html">Home 2</a>
                 </li>
               </ul>
+            </li>
+            <li class="nav-item d-xl-none">
+              <a class="nav-link" href="index.html">Home 1</a>
+            </li>
+            <li class="nav-item d-xl-none">
+              <a class="nav-link" href="home-2.html">Home 2</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="certification.html">Certification</a>
@@ -77,10 +83,10 @@
               <a class="nav-link" href="showcase.html">Showcase</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="admissions.html">Admissions</a>
+              <a class="nav-link" href="admissions.html">Contact</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="portal.html">Portal</a>
+              <a class="nav-link" href="portal.html">Dashboard</a>
             </li>
           </ul>
 
@@ -124,14 +130,14 @@
             </p>
           </div>
           <div class="col-lg-5 gsap-hero-fade">
-            <div class="p-4 bg-surface border rounded-1" style="border-color: var(--border-gold) !important;">
-              <div class="d-flex align-items-center gap-2 text-gold mb-2">
-                <i class="bi bi-info-circle"></i>
-                <span class="small text-uppercase fw-semibold" style="letter-spacing: 0.14em;">0% EMI Plans &amp; Dual Course Privilege</span>
+            <div class="page-hero-visual">
+              <div class="page-hero-img-frame photo-frame">
+                <img src="https://images.pexels.com/photos/2113855/pexels-photo-2113855.jpeg?auto=compress&cs=tinysrgb&w=1000" alt="Luxury makeup vanity and professional cosmetology course kits at Aurelia Academy">
               </div>
-              <p class="small text-secondary-luxury mb-0">
-                All tuition fees displayed below are in <strong>Indian Rupees (INR ₹)</strong> with 3-to-6 month no-cost EMI options. Combine any two certificate tracks to receive a <strong>₹10,000 scholarship credit</strong> toward your take-home Pro Vanity Kit.
-              </p>
+              <div class="page-hero-caption-pill">
+                <span class="small text-gold text-uppercase fw-semibold" style="letter-spacing: 0.12em; font-size: 0.65rem;">18+ Accredited Diplomas</span>
+                <strong class="font-serif fs-6">0% EMI &amp; Pro Kits Included</strong>
+              </div>
             </div>
           </div>
         </div>
@@ -646,11 +652,17 @@
         <div class="col-lg-4">
           <a class="navbar-brand-luxury mb-3 d-inline-flex" href="index.html">
             <svg class="brand-icon-svg" viewBox="0 0 64 64" fill="none" aria-hidden="true">
-              <rect x="2" y="2" width="60" height="60" rx="14" stroke="#B45474" stroke-width="2.2"/>
-              <path d="M18 46V27C18 19.268 24.268 13 32 13C39.732 13 46 19.268 46 27V46" stroke="#B45474" stroke-width="2.2" stroke-linecap="round"/>
-              <path d="M32 21C28.5 25.5 27 29.5 32 34C37 29.5 35.5 25.5 32 21Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
-              <path d="M22 44C24.8 39 28.2 36.8 32 36.8C35.8 36.8 39.2 39 42 44" stroke="#B45474" stroke-width="2" stroke-linecap="round"/>
-              <path d="M32 7L33.2 9.8L36 11L33.2 12.2L32 15L30.8 12.2L28 11L30.8 9.8L32 7Z" fill="#B45474"/>
+              <circle cx="32" cy="32" r="29" stroke="var(--accent-gold, #1B6B52)" stroke-width="2.2"/>
+              <circle cx="32" cy="32" r="25" stroke="var(--accent-rose, #C59B5F)" stroke-width="1" stroke-opacity="0.55"/>
+              <path d="M20.5 31C16.8 26.2 17.2 18.2 24 16.2C30.8 18.2 31.2 26.2 27.5 31Z" fill="var(--accent-rose, #C59B5F)" fill-opacity="0.22" stroke="var(--accent-gold, #1B6B52)" stroke-width="2" stroke-linejoin="round"/>
+              <path d="M22.2 21.5V28.5M25.8 21.5V28.5" stroke="var(--accent-gold, #1B6B52)" stroke-width="1.5" stroke-linecap="round"/>
+              <rect x="20.5" y="31" width="7" height="3.8" rx="1" stroke="var(--accent-rose, #C59B5F)" stroke-width="1.8"/>
+              <path d="M21.2 34.8H26.8L25.6 48.2C25.5 49.2 22.5 49.2 22.4 48.2Z" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round"/>
+              <path d="M37 29.5V20.5L43 16.5V29.5Z" fill="var(--accent-gold, #1B6B52)" fill-opacity="0.88" stroke="var(--accent-gold, #1B6B52)" stroke-width="1.6" stroke-linejoin="round"/>
+              <rect x="36" y="29.5" width="8" height="4.2" rx="0.8" stroke="var(--accent-rose, #C59B5F)" stroke-width="1.8"/>
+              <rect x="35" y="33.7" width="10" height="15" rx="2" stroke="currentColor" stroke-width="1.9"/>
+              <path d="M32 8.5L33.1 11.1L35.7 12.2L33.1 13.3L32 15.9L30.9 13.3L28.3 12.2L30.9 11.1Z" fill="var(--accent-rose, #C59B5F)"/>
+              <path d="M20 52H44" stroke="var(--accent-rose, #C59B5F)" stroke-width="1.5" stroke-linecap="round" opacity="0.7"/>
             </svg>
             <span class="brand-text-wrap">
               <span class="brand-title">Aurelia Academy</span>
@@ -684,17 +696,17 @@
             <li><a href="certification.html">Certification</a></li>
             <li><a href="courses.html">Courses &amp; Tuition</a></li>
             <li><a href="showcase.html">Student Showcase</a></li>
-            <li><a href="admissions.html">Admissions</a></li>
+            <li><a href="admissions.html">Contact</a></li>
           </ul>
         </div>
 
         <div class="col-6 col-md-4 col-lg-3">
-          <h3 class="footer-heading">Student Portal &amp; Faculties</h3>
+          <h3 class="footer-heading">Dashboard &amp; Faculties</h3>
           <ul class="footer-links">
             <li><a href="courses.html#maternity-collection">Bridal &amp; Airbrush Makeup</a></li>
             <li><a href="courses.html#newborn-collection">Clinical Cosmetology &amp; Skin</a></li>
             <li><a href="courses.html#milestone-collection">Hair Couture &amp; Nail Artistry</a></li>
-            <li><a href="portal.html">Student Dashboard Portal</a></li>
+            <li><a href="portal.html">Dashboard</a></li>
             <li><a href="login.html">Student Portal Login</a></li>
             <li><a href="signup.html">Student Registration</a></li>
           </ul>

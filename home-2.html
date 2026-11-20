@@ -10,7 +10,7 @@
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300..700;1,9..40,400&family=Playfair+Display:ital,wght@0,400..700;1,400..600&display=swap" rel="stylesheet">
 
   <!-- Bootstrap 5.3 CSS & Bootstrap Icons -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -29,11 +29,17 @@
       <div class="container">
         <a class="navbar-brand-luxury" href="index.html">
           <svg class="brand-icon-svg" viewBox="0 0 64 64" fill="none" aria-hidden="true">
-            <rect x="2" y="2" width="60" height="60" rx="14" stroke="#B45474" stroke-width="2.2"/>
-            <path d="M18 46V27C18 19.268 24.268 13 32 13C39.732 13 46 19.268 46 27V46" stroke="#B45474" stroke-width="2.2" stroke-linecap="round"/>
-            <path d="M32 21C28.5 25.5 27 29.5 32 34C37 29.5 35.5 25.5 32 21Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
-            <path d="M22 44C24.8 39 28.2 36.8 32 36.8C35.8 36.8 39.2 39 42 44" stroke="#B45474" stroke-width="2" stroke-linecap="round"/>
-            <path d="M32 7L33.2 9.8L36 11L33.2 12.2L32 15L30.8 12.2L28 11L30.8 9.8L32 7Z" fill="#B45474"/>
+            <circle cx="32" cy="32" r="29" stroke="var(--accent-gold, #1B6B52)" stroke-width="2.2"/>
+            <circle cx="32" cy="32" r="25" stroke="var(--accent-rose, #C59B5F)" stroke-width="1" stroke-opacity="0.55"/>
+            <path d="M20.5 31C16.8 26.2 17.2 18.2 24 16.2C30.8 18.2 31.2 26.2 27.5 31Z" fill="var(--accent-rose, #C59B5F)" fill-opacity="0.22" stroke="var(--accent-gold, #1B6B52)" stroke-width="2" stroke-linejoin="round"/>
+            <path d="M22.2 21.5V28.5M25.8 21.5V28.5" stroke="var(--accent-gold, #1B6B52)" stroke-width="1.5" stroke-linecap="round"/>
+            <rect x="20.5" y="31" width="7" height="3.8" rx="1" stroke="var(--accent-rose, #C59B5F)" stroke-width="1.8"/>
+            <path d="M21.2 34.8H26.8L25.6 48.2C25.5 49.2 22.5 49.2 22.4 48.2Z" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round"/>
+            <path d="M37 29.5V20.5L43 16.5V29.5Z" fill="var(--accent-gold, #1B6B52)" fill-opacity="0.88" stroke="var(--accent-gold, #1B6B52)" stroke-width="1.6" stroke-linejoin="round"/>
+            <rect x="36" y="29.5" width="8" height="4.2" rx="0.8" stroke="var(--accent-rose, #C59B5F)" stroke-width="1.8"/>
+            <rect x="35" y="33.7" width="10" height="15" rx="2" stroke="currentColor" stroke-width="1.9"/>
+            <path d="M32 8.5L33.1 11.1L35.7 12.2L33.1 13.3L32 15.9L30.9 13.3L28.3 12.2L30.9 11.1Z" fill="var(--accent-rose, #C59B5F)"/>
+            <path d="M20 52H44" stroke="var(--accent-rose, #C59B5F)" stroke-width="1.5" stroke-linecap="round" opacity="0.7"/>
           </svg>
           <span class="brand-text-wrap">
             <span class="brand-title">Aurelia Academy</span>
@@ -48,24 +54,24 @@
 
         <div class="collapse navbar-collapse" id="studioNavbarCollapse">
           <ul class="navbar-nav mx-auto">
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle active" href="home-2.html" id="homeDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <li class="nav-item dropdown d-none d-xl-block">
+              <a class="nav-link dropdown-toggle active" href="home-2.html" id="homeDropdown" role="button" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false">
                 Home
               </a>
               <ul class="dropdown-menu" aria-labelledby="homeDropdown">
                 <li>
-                  <a class="dropdown-item" href="index.html">
-                    <span>Home 1 — Editorial Academy</span>
-                    <span class="demo-tag">01</span>
-                  </a>
+                  <a class="dropdown-item" href="index.html">Home 1</a>
                 </li>
                 <li>
-                  <a class="dropdown-item active" href="home-2.html">
-                    <span>Home 2 — Couture Lookbook</span>
-                    <span class="demo-tag">02</span>
-                  </a>
+                  <a class="dropdown-item active" href="home-2.html">Home 2</a>
                 </li>
               </ul>
+            </li>
+            <li class="nav-item d-xl-none">
+              <a class="nav-link" href="index.html">Home 1</a>
+            </li>
+            <li class="nav-item d-xl-none">
+              <a class="nav-link active" href="home-2.html">Home 2</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="certification.html">Certification</a>
@@ -77,10 +83,10 @@
               <a class="nav-link" href="showcase.html">Showcase</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="admissions.html">Admissions</a>
+              <a class="nav-link" href="admissions.html">Contact</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="portal.html">Portal</a>
+              <a class="nav-link" href="portal.html">Dashboard</a>
             </li>
           </ul>
 
@@ -109,22 +115,14 @@
 
   <main>
     <!-- ======================================================================
-         1. REDESIGNED HOME 2 HERO: COUTURE ATELIER SPLIT-STAGE & BENTO SHOWCASE
+         1. REDESIGNED HOME 2 HERO: RUNWAY EDITORIAL MONOGRAPH & PANORAMIC CINEMA
          ====================================================================== -->
-    <section class="hero-home2 bg-ivory">
+    <section class="hero-home2">
       <div class="container">
-        <!-- Top Accreditation Pill Bar -->
-        <div class="hero-home2-accreditation-bar gsap-hero-fade">
-          <span><i class="bi bi-patch-check-fill text-gold me-2"></i>CIDESCO &amp; VTCT International Curriculum</span>
-          <span class="d-none d-md-inline text-gold fw-semibold">2026 Masterclass &amp; Diploma Admissions Open</span>
-          <span>Live Model Practicals &bull; Est. 2018</span>
-        </div>
-
-        <!-- Main Couture Stage Container -->
-        <div class="hero-home2-stage gsap-hero-fade">
-          <div class="row align-items-center g-5">
-            <!-- Left Column: Editorial Typography, Track Pills & CTAs -->
-            <div class="col-lg-5">
+        <div class="row align-items-stretch g-5">
+          <!-- Left Column: Editorial Lead + Vertical Semester Dossier Stack -->
+          <div class="col-lg-5 d-flex flex-column justify-content-center gsap-hero-fade">
+            <div>
               <span class="eyebrow">Haute Beauté &bull; Professional Training</span>
               <h1 class="display-editorial mb-3">
                 Master the <em>Art &amp; Science</em> of Modern Beauty.
@@ -133,118 +131,73 @@
                 An immersive cosmetology conservatory where aspiring beauticians master HD airbrush bridal artistry, clinical dermal therapy, hair couture, and nail architecture on live models.
               </p>
 
-              <!-- Interactive Specialization Pills -->
-              <div class="hero-home2-pill-list mb-4">
-                <a href="courses.html#maternity-collection" class="hero-home2-pill">
-                  <i class="bi bi-stars text-gold"></i>
-                  <span>Bridal Airbrush</span>
+              <!-- Vertical Interactive Dossier Stack -->
+              <div class="hero-home2-dossier-stack">
+                <a href="courses.html#maternity-collection" class="hero-home2-dossier-item">
+                  <span class="font-serif fs-3 text-gold fst-italic lh-1">I.</span>
+                  <div>
+                    <span class="small text-uppercase text-muted-luxury d-block" style="letter-spacing: 0.12em; font-size: 0.65rem;">Weeks 1 – 8 &bull; Makeup Faculty</span>
+                    <strong class="font-serif fs-5 d-block">L’Éclat — Bridal &amp; Editorial Airbrush</strong>
+                  </div>
                 </a>
-                <a href="courses.html#newborn-collection" class="hero-home2-pill">
-                  <i class="bi bi-droplet-half text-gold"></i>
-                  <span>Clinical Aesthetics</span>
-                </a>
-                <a href="courses.html#milestone-collection" class="hero-home2-pill">
-                  <i class="bi bi-scissors text-gold"></i>
-                  <span>Hair Couture</span>
-                </a>
-                <a href="courses.html#milestone-collection" class="hero-home2-pill">
-                  <i class="bi bi-gem text-gold"></i>
-                  <span>Nail Extensions</span>
-                </a>
-              </div>
 
-              <div class="d-flex flex-wrap align-items-center gap-3 pt-1">
-                <a href="admissions.html#enquiry-form" class="btn-luxury btn-luxury-primary">
-                  <span>Reserve Batch Seat</span>
-                  <i class="bi bi-arrow-right"></i>
+                <a href="courses.html#newborn-collection" class="hero-home2-dossier-item">
+                  <span class="font-serif fs-3 text-gold fst-italic lh-1">II.</span>
+                  <div>
+                    <span class="small text-uppercase text-muted-luxury d-block" style="letter-spacing: 0.12em; font-size: 0.65rem;">Weeks 9 – 16 &bull; Dermal Lab</span>
+                    <strong class="font-serif fs-5 d-block">La Science — Clinical Medi-Facial Therapy</strong>
+                  </div>
                 </a>
-                <a href="showcase.html" class="btn-editorial-link">
-                  <span>Student Work Lookbook</span>
-                  <i class="bi bi-arrow-up-right"></i>
+
+                <a href="courses.html#milestone-collection" class="hero-home2-dossier-item">
+                  <span class="font-serif fs-3 text-gold fst-italic lh-1">III.</span>
+                  <div>
+                    <span class="small text-uppercase text-muted-luxury d-block" style="letter-spacing: 0.12em; font-size: 0.65rem;">Weeks 17 – 24 &bull; Couture &amp; Career</span>
+                    <strong class="font-serif fs-5 d-block">L’Artisan — Hair Couture &amp; Nail Architecture</strong>
+                  </div>
                 </a>
               </div>
             </div>
 
-            <!-- Right Column: Asymmetric Bento Visual Mosaic -->
-            <div class="col-lg-7">
-              <div class="hero-home2-bento">
-                <!-- Primary Tall Editorial Frame -->
-                <div class="hero-home2-bento-main photo-frame">
-                  <img src="https://images.pexels.com/photos/2681751/pexels-photo-2681751.jpeg?auto=compress&cs=tinysrgb&w=1000" alt="Student bridal makeup work featuring luminous glass skin and rose-gold eye artistry">
-                  <div class="hero-home2-bento-overlay">
-                    <div class="d-flex justify-content-between align-items-center gap-2">
-                      <div>
-                        <span class="small text-gold text-uppercase fw-semibold d-block" style="letter-spacing: 0.14em; font-size: 0.65rem;">Graduation Portfolio Plate #04</span>
-                        <strong class="font-serif fs-5">Royal Velvet Bridal HD Look</strong>
-                      </div>
-                      <span class="badge bg-surface text-gold border" style="border-color: var(--border-gold) !important;">Distinction</span>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- Stacked Secondary Lab Frame + Live Batch Card -->
-                <div class="hero-home2-bento-side">
-                  <div class="hero-home2-bento-subimg photo-frame">
-                    <img src="https://images.pexels.com/photos/3757942/pexels-photo-3757942.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Clinical dermal aesthetics training in Aurelia Academy lab">
-                  </div>
-
-                  <div class="hero-home2-bento-statcard">
-                    <div>
-                      <span class="small text-gold text-uppercase fw-semibold d-block mb-1" style="letter-spacing: 0.14em; font-size: 0.68rem;">Hands-On Guarantee</span>
-                      <div class="font-serif fs-2 text-gold lh-1 mb-2">600+ Hours</div>
-                      <p class="small text-secondary-luxury mb-3">
-                        Supervised live-model practical logs, dermal machine operation &amp; 5-look studio portfolio shoot.
-                      </p>
-                    </div>
-                    <div class="pt-2 border-top d-flex justify-content-between align-items-center small" style="border-color: var(--border-subtle) !important;">
-                      <span class="text-muted-luxury">Student Portal Access</span>
-                      <a href="portal.html" class="text-gold fw-semibold">Open Portal &rarr;</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
+            <div class="d-flex flex-wrap align-items-center gap-3 pt-2">
+              <a href="admissions.html#enquiry-form" class="btn-luxury btn-luxury-primary">
+                <span>Reserve Batch Seat</span>
+                <i class="bi bi-arrow-right"></i>
+              </a>
+              <a href="showcase.html" class="btn-editorial-link">
+                <span>Student Work Lookbook</span>
+                <i class="bi bi-arrow-up-right"></i>
+              </a>
             </div>
           </div>
 
-          <!-- Bottom 3-Column Curriculum Track Strip -->
-          <div class="hero-home2-curriculum-strip">
-            <div class="row g-3">
-              <div class="col-md-4">
-                <div class="hero-home2-track-card">
-                  <span class="triptych-number">I.</span>
-                  <div>
-                    <span class="small text-uppercase text-muted-luxury d-block" style="letter-spacing: 0.12em; font-size: 0.66rem;">Weeks 1 – 8 &bull; Makeup Faculty</span>
-                    <h2 class="h5 font-serif mb-1">L’Éclat — <em>Bridal &amp; Editorial</em></h2>
-                    <p class="small text-secondary-luxury mb-0">
-                      Color chemistry, silicone HD airbrush, editorial eye sculpting &amp; international bridal styling.
-                    </p>
-                  </div>
+          <!-- Right Column: Wide Panoramic Cinema Frame + 3-Part Lookbook Strip -->
+          <div class="col-lg-7 gsap-hero-fade">
+            <div class="hero-home2-cinema-showcase h-100 d-flex flex-column justify-content-between">
+              <div class="hero-home2-cinema-frame photo-frame">
+                <img src="https://images.pexels.com/photos/2681751/pexels-photo-2681751.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Student bridal makeup work featuring luminous glass skin and rose-gold eye artistry">
+                <div class="hero-home2-cinema-badge">
+                  <span class="small text-gold text-uppercase fw-semibold d-block" style="letter-spacing: 0.14em; font-size: 0.64rem;">Graduation Portfolio Plate #04</span>
+                  <strong class="font-serif fs-5">Royal Velvet Bridal HD Look</strong>
                 </div>
               </div>
 
-              <div class="col-md-4">
-                <div class="hero-home2-track-card">
-                  <span class="triptych-number">II.</span>
-                  <div>
-                    <span class="small text-uppercase text-muted-luxury d-block" style="letter-spacing: 0.12em; font-size: 0.66rem;">Weeks 9 – 16 &bull; Dermal Lab</span>
-                    <h2 class="h5 font-serif mb-1">La Science — <em>Clinical Skincare</em></h2>
-                    <p class="small text-secondary-luxury mb-0">
-                      Hydra-dermabrasion, chemical peel safety, LED phototherapy &amp; holistic facial massage.
-                    </p>
-                  </div>
+              <div class="hero-home2-lookbook-strip">
+                <div class="hero-home2-mini-plate photo-frame">
+                  <img src="https://images.pexels.com/photos/3757942/pexels-photo-3757942.jpeg?auto=compress&cs=tinysrgb&w=700" alt="Clinical dermal aesthetics training in Aurelia Academy lab">
                 </div>
-              </div>
-
-              <div class="col-md-4">
-                <div class="hero-home2-track-card">
-                  <span class="triptych-number">III.</span>
+                <div class="hero-home2-mini-plate photo-frame">
+                  <img src="https://images.pexels.com/photos/3993449/pexels-photo-3993449.jpeg?auto=compress&cs=tinysrgb&w=700" alt="Architectural bridal hair styling in academy lounge">
+                </div>
+                <div class="hero-home2-guarantee-box">
                   <div>
-                    <span class="small text-uppercase text-muted-luxury d-block" style="letter-spacing: 0.12em; font-size: 0.66rem;">Weeks 17 – 24 &bull; Couture &amp; Career</span>
-                    <h2 class="h5 font-serif mb-1">L’Artisan — <em>Hair, Nails &amp; Salon</em></h2>
-                    <p class="small text-secondary-luxury mb-0">
-                      Balayage hair coloring, Russian gel nail extensions, portfolio shoot &amp; global placement.
+                    <span class="small text-gold text-uppercase fw-semibold d-block" style="letter-spacing: 0.12em; font-size: 0.65rem;">Hands-On Guarantee</span>
+                    <div class="font-serif fs-2 text-gold lh-1 my-1">600+ Hours</div>
+                    <p class="small text-secondary-luxury mb-2" style="font-size: 0.8rem;">
+                      Live-model practical logs &amp; 5-look studio shoot.
                     </p>
                   </div>
+                  <a href="portal.html" class="small text-gold fw-semibold text-uppercase" style="letter-spacing: 0.1em; font-size: 0.7rem;">Open Dashboard &rarr;</a>
                 </div>
               </div>
             </div>
@@ -254,49 +207,79 @@
     </section>
 
     <!-- ======================================================================
-         2. CURATORIAL ESSAY & ASYMMETRIC MAGAZINE SPREAD
+         2. REDESIGNED DEAN'S ACADEMIC MANIFESTO & 3-COLUMN EDITORIAL SPREAD
          ====================================================================== -->
     <section class="section-py-lg bg-beige">
       <div class="container">
-        <div class="row align-items-center g-5">
-          <div class="col-lg-5 gsap-reveal">
-            <span class="eyebrow">Dean’s Academic Manifesto</span>
-            <h2 class="section-title">
-              Beyond Tutorials: Crafting <em>Industry-Ready</em> Beauty Leaders
-            </h2>
-            <p class="section-subtitle mb-4">
-              In an era of 30-second social media beauty clips, true professional mastery cannot be learned through a screen. At Aurelia Academy, we treat cosmetology as both an exact clinical science and a high-fashion art form—training you on diverse skin tones, real facial structures, and medical-grade dermal equipment.
-            </p>
-            <div class="p-4 bg-surface border rounded-1 mb-4" style="border-color: var(--border-subtle) !important;">
-              <p class="font-serif fs-4 fst-italic mb-2">
-                “When a bride or skincare client sits in your chair, she trusts you with her confidence. Our mission is to make your technique worthy of that trust.”
-              </p>
-              <span class="small text-gold text-uppercase" style="letter-spacing: 0.14em; font-size: 0.7rem;">— Aurelia Varma, Founder &amp; Principal Examiner</span>
+        <div class="manifesto-editorial-spread gsap-reveal">
+          <!-- Spread Top Header -->
+          <div class="row align-items-end justify-content-between g-4 pb-4 mb-4 border-bottom" style="border-color: var(--border-subtle) !important;">
+            <div class="col-lg-8">
+              <span class="eyebrow">Dean’s Academic Manifesto</span>
+              <h2 class="section-title mb-0">
+                Beyond Tutorials: Crafting <em>Industry-Ready</em> Beauty Leaders
+              </h2>
             </div>
-            <a href="certification.html" class="btn-editorial-link">
-              <span>Explore Our Accreditation Standards</span>
-              <i class="bi bi-arrow-right"></i>
-            </a>
+            <div class="col-lg-4 text-lg-end">
+              <a href="certification.html" class="btn-editorial-link">
+                <span>Explore Our Accreditation Standards</span>
+                <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
           </div>
 
-          <div class="col-lg-7 gsap-reveal">
-            <div class="row g-4 justify-content-center">
-              <div class="col-6">
-                <div class="photo-frame frame-museum ratio-portrait">
+          <!-- 3-Column Magazine Spread Grid -->
+          <div class="row g-4 align-items-stretch">
+            <!-- Column 1: Founder Quote & Educator Frame -->
+            <div class="col-lg-4">
+              <div class="manifesto-col-card">
+                <div class="manifesto-card-media">
                   <img src="https://images.pexels.com/photos/3065209/pexels-photo-3065209.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Master educator demonstrating precision eye makeup on live model" loading="lazy">
                 </div>
-              </div>
-              <div class="col-6">
-                <div class="photo-frame frame-museum ratio-portrait">
-                  <img src="https://images.pexels.com/photos/3997989/pexels-photo-3997989.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Student practicing clinical facial therapy in academy lab" loading="lazy">
+                <span class="badge bg-surface text-gold border align-self-start mb-2" style="border-color: var(--border-gold) !important;">Founder’s Promise</span>
+                <h3 class="h4 font-serif mb-2">Confidence Forged in Craft</h3>
+                <p class="small text-secondary-luxury fst-italic manifesto-copy mb-3">
+                  “When a bride or skincare client sits in your chair, she trusts you with her confidence. Our mission is to make your clinical and creative technique truly worthy of that trust.”
+                </p>
+                <div class="manifesto-col-footer small">
+                  <span class="text-muted-luxury">Principal Examiner</span>
+                  <strong class="text-gold">Aurelia Varma</strong>
                 </div>
               </div>
-              <div class="col-12">
-                <div class="p-4 bg-surface border" style="border-color: var(--border-subtle) !important;">
-                  <div class="font-serif fs-3 text-gold mb-1">CRI-98 Daylight Vanity &amp; Clinical Labs</div>
-                  <p class="small text-secondary-luxury mb-0">
-                    Every training bay is calibrated to 5600K studio daylight so students master true-to-life color matching and undertone correction.
-                  </p>
+            </div>
+
+            <!-- Column 2: Core Philosophy Narrative & Pillars -->
+            <div class="col-lg-4">
+              <div class="manifesto-col-card">
+                <div class="manifesto-card-media">
+                  <img src="https://images.pexels.com/photos/2113855/pexels-photo-2113855.jpeg?auto=compress&cs=tinysrgb&w=900" alt="International vanity makeup kit and pro academy brushes" loading="lazy">
+                </div>
+                <span class="badge bg-surface text-gold border align-self-start mb-2" style="border-color: var(--border-gold) !important;">The Conservatory Standard</span>
+                <h3 class="h4 font-serif mb-2">Clinical Science &amp; Artistry</h3>
+                <p class="small text-secondary-luxury manifesto-copy mb-3">
+                  Beyond 30-second video tutorials, our students train hands-on across diverse skin undertones, real facial bone structures, and medical-grade dermal devices under faculty guidance.
+                </p>
+                <div class="manifesto-col-footer small">
+                  <span class="text-muted-luxury">Batch Cap</span>
+                  <strong class="text-gold">Max 15 Students / Intake</strong>
+                </div>
+              </div>
+            </div>
+
+            <!-- Column 3: Clinical Lab & CRI-98 Daylight Calibration -->
+            <div class="col-lg-4">
+              <div class="manifesto-col-card">
+                <div class="manifesto-card-media">
+                  <img src="https://images.pexels.com/photos/3997989/pexels-photo-3997989.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Student practicing clinical facial therapy in academy lab" loading="lazy">
+                </div>
+                <span class="badge bg-surface text-gold border align-self-start mb-2" style="border-color: var(--border-gold) !important;">5600K Studio Daylight</span>
+                <h3 class="h4 font-serif mb-2">CRI-98 Daylight Clinical Labs</h3>
+                <p class="small text-secondary-luxury manifesto-copy mb-3">
+                  Every Hollywood vanity bay and facial ward is calibrated to 5600K daylight illumination so students master true-to-life color matching, peel assessment, and undertone correction.
+                </p>
+                <div class="manifesto-col-footer small">
+                  <span class="text-muted-luxury">Campus Standard</span>
+                  <strong class="text-gold">ISO Sterilized Labs</strong>
                 </div>
               </div>
             </div>
@@ -306,7 +289,7 @@
     </section>
 
     <!-- ======================================================================
-         3. DISTINCT STUDENT WORK & FACULTY ARCHIVE INDEX
+         3. REDESIGNED SELECTED GRADUATION PORTFOLIOS (3-COLUMN DOSSIER GRID)
          ====================================================================== -->
     <section class="section-py-lg bg-ivory">
       <div class="container">
@@ -320,90 +303,89 @@
           </a>
         </div>
 
-        <div class="editorial-chapter-row gsap-reveal">
-          <div class="row align-items-center g-4">
-            <div class="col-md-4 col-xl-2">
-              <span class="text-gold font-serif fs-2 fst-italic">Series 01</span>
-              <span class="d-block small text-uppercase text-muted-luxury" style="letter-spacing: 0.14em;">Bridal &amp; Editorial</span>
-            </div>
-            <div class="col-md-8 col-xl-4">
-              <h3 class="h2 font-serif mb-2">Velvet &amp; Gold: The Bridal Lookbook</h3>
-              <p class="small text-secondary-luxury mb-3">
-                Featuring final examination bridal and editorial looks created by our Master Makeup students—showcasing waterproof HD airbrush skin, graphic liners, and draped veil styling.
+        <div class="row g-4 align-items-stretch">
+          <!-- Series 01 Card -->
+          <div class="col-lg-4 gsap-reveal">
+            <article class="portfolio-dossier-card">
+              <div class="portfolio-dossier-header">
+                <span class="text-gold font-serif fs-3 fst-italic lh-1">Series 01</span>
+                <span class="small text-uppercase text-muted-luxury" style="letter-spacing: 0.14em; font-size: 0.68rem;">Bridal &amp; Editorial</span>
+              </div>
+              <div class="portfolio-diptych-visual">
+                <div class="photo-frame">
+                  <img src="https://images.pexels.com/photos/457701/pexels-photo-457701.jpeg?auto=compress&cs=tinysrgb&w=700" alt="High-fashion bridal makeup look by diploma student" loading="lazy">
+                </div>
+                <div class="photo-frame">
+                  <img src="https://images.pexels.com/photos/1721558/pexels-photo-1721558.jpeg?auto=compress&cs=tinysrgb&w=700" alt="Shimmering gold eye makeup application in studio" loading="lazy">
+                </div>
+              </div>
+              <h3 class="h4 font-serif mb-2">Velvet &amp; Gold: Bridal Lookbook</h3>
+              <p class="small text-secondary-luxury portfolio-desc mb-3">
+                Final examination bridal and editorial looks created by Master Makeup students—featuring waterproof HD airbrush skin, graphic liners, and veil styling.
               </p>
-              <a href="showcase.html?category=maternity" class="btn-editorial-link">
-                <span>View Bridal Student Work</span>
-                <i class="bi bi-arrow-up-right"></i>
-              </a>
-            </div>
-            <div class="col-6 col-md-6 col-xl-3">
-              <div class="photo-frame ratio-portrait">
-                <img src="https://images.pexels.com/photos/457701/pexels-photo-457701.jpeg?auto=compress&cs=tinysrgb&w=700" alt="High-fashion bridal makeup look by diploma student" loading="lazy">
+              <div class="portfolio-dossier-footer">
+                <a href="showcase.html?category=maternity" class="btn-editorial-link">
+                  <span>View Bridal Student Work</span>
+                  <i class="bi bi-arrow-up-right"></i>
+                </a>
               </div>
-            </div>
-            <div class="col-6 col-md-6 col-xl-3">
-              <div class="photo-frame ratio-portrait">
-                <img src="https://images.pexels.com/photos/1721558/pexels-photo-1721558.jpeg?auto=compress&cs=tinysrgb&w=700" alt="Shimmering gold eye makeup application in studio" loading="lazy">
-              </div>
-            </div>
+            </article>
           </div>
-        </div>
 
-        <div class="editorial-chapter-row gsap-reveal">
-          <div class="row align-items-center g-4">
-            <div class="col-md-4 col-xl-2">
-              <span class="text-gold font-serif fs-2 fst-italic">Series 02</span>
-              <span class="d-block small text-uppercase text-muted-luxury" style="letter-spacing: 0.14em;">Dermal Aesthetics</span>
-            </div>
-            <div class="col-md-8 col-xl-4">
-              <h3 class="h2 font-serif mb-2">Cellular Glow: Clinical Skincare Logs</h3>
-              <p class="small text-secondary-luxury mb-3">
-                Supervised clinical assessments in hydra-dermabrasion, lymphatic gua sha sculpting, enzymatic resurfacing peels, and LED barrier restoration.
+          <!-- Series 02 Card -->
+          <div class="col-lg-4 gsap-reveal">
+            <article class="portfolio-dossier-card">
+              <div class="portfolio-dossier-header">
+                <span class="text-gold font-serif fs-3 fst-italic lh-1">Series 02</span>
+                <span class="small text-uppercase text-muted-luxury" style="letter-spacing: 0.14em; font-size: 0.68rem;">Dermal Aesthetics</span>
+              </div>
+              <div class="portfolio-diptych-visual">
+                <div class="photo-frame">
+                  <img src="https://images.pexels.com/photos/3985329/pexels-photo-3985329.jpeg?auto=compress&cs=tinysrgb&w=700" alt="Clinical facial mask and dermal treatment practical" loading="lazy">
+                </div>
+                <div class="photo-frame">
+                  <img src="https://images.pexels.com/photos/3997993/pexels-photo-3997993.jpeg?auto=compress&cs=tinysrgb&w=700" alt="Advanced aesthetic skincare modality session" loading="lazy">
+                </div>
+              </div>
+              <h3 class="h4 font-serif mb-2">Cellular Glow: Clinical Logs</h3>
+              <p class="small text-secondary-luxury portfolio-desc mb-3">
+                Supervised clinical assessments in hydra-dermabrasion, lymphatic gua sha sculpting, enzymatic resurfacing peels, and LED barrier restoration therapy.
               </p>
-              <a href="showcase.html?category=newborn" class="btn-editorial-link">
-                <span>View Aesthetics Series</span>
-                <i class="bi bi-arrow-up-right"></i>
-              </a>
-            </div>
-            <div class="col-6 col-md-6 col-xl-3">
-              <div class="photo-frame ratio-portrait">
-                <img src="https://images.pexels.com/photos/3985329/pexels-photo-3985329.jpeg?auto=compress&cs=tinysrgb&w=700" alt="Clinical facial mask and dermal treatment practical" loading="lazy">
+              <div class="portfolio-dossier-footer">
+                <a href="showcase.html?category=newborn" class="btn-editorial-link">
+                  <span>View Aesthetics Series</span>
+                  <i class="bi bi-arrow-up-right"></i>
+                </a>
               </div>
-            </div>
-            <div class="col-6 col-md-6 col-xl-3">
-              <div class="photo-frame ratio-portrait">
-                <img src="https://images.pexels.com/photos/3997993/pexels-photo-3997993.jpeg?auto=compress&cs=tinysrgb&w=700" alt="Advanced aesthetic skincare modality session" loading="lazy">
-              </div>
-            </div>
+            </article>
           </div>
-        </div>
 
-        <div class="editorial-chapter-row gsap-reveal">
-          <div class="row align-items-center g-4">
-            <div class="col-md-4 col-xl-2">
-              <span class="text-gold font-serif fs-2 fst-italic">Series 03</span>
-              <span class="d-block small text-uppercase text-muted-luxury" style="letter-spacing: 0.14em;">Hair &amp; Nails</span>
-            </div>
-            <div class="col-md-8 col-xl-4">
-              <h3 class="h2 font-serif mb-2">Sculpted Tresses &amp; Nail Architecture</h3>
-              <p class="small text-secondary-luxury mb-3">
-                Precision hair coloring, keratin smoothing, red-carpet chignons, and encapsulated hard-gel nail extensions crafted in our styling lounge.
+          <!-- Series 03 Card -->
+          <div class="col-lg-4 gsap-reveal">
+            <article class="portfolio-dossier-card">
+              <div class="portfolio-dossier-header">
+                <span class="text-gold font-serif fs-3 fst-italic lh-1">Series 03</span>
+                <span class="small text-uppercase text-muted-luxury" style="letter-spacing: 0.14em; font-size: 0.68rem;">Hair &amp; Nails</span>
+              </div>
+              <div class="portfolio-diptych-visual">
+                <div class="photo-frame">
+                  <img src="https://images.pexels.com/photos/3993449/pexels-photo-3993449.jpeg?auto=compress&cs=tinysrgb&w=700" alt="Intricate bridal hair styling updo by student" loading="lazy">
+                </div>
+                <div class="photo-frame">
+                  <img src="https://images.pexels.com/photos/3997379/pexels-photo-3997379.jpeg?auto=compress&cs=tinysrgb&w=700" alt="Luxury manicure and gel nail extension art" loading="lazy">
+                </div>
+              </div>
+              <h3 class="h4 font-serif mb-2">Sculpted Tresses &amp; Nails</h3>
+              <p class="small text-secondary-luxury portfolio-desc mb-3">
+                Precision hair coloring, keratin smoothing, red-carpet chignons, and encapsulated hard-gel nail extensions crafted inside our styling lounge.
               </p>
-              <a href="showcase.html?category=family" class="btn-editorial-link">
-                <span>View Hair &amp; Nail Series</span>
-                <i class="bi bi-arrow-up-right"></i>
-              </a>
-            </div>
-            <div class="col-6 col-md-6 col-xl-3">
-              <div class="photo-frame ratio-portrait">
-                <img src="https://images.pexels.com/photos/3993449/pexels-photo-3993449.jpeg?auto=compress&cs=tinysrgb&w=700" alt="Intricate bridal hair styling updo by student" loading="lazy">
+              <div class="portfolio-dossier-footer">
+                <a href="showcase.html?category=family" class="btn-editorial-link">
+                  <span>View Hair &amp; Nail Series</span>
+                  <i class="bi bi-arrow-up-right"></i>
+                </a>
               </div>
-            </div>
-            <div class="col-6 col-md-6 col-xl-3">
-              <div class="photo-frame ratio-portrait">
-                <img src="https://images.pexels.com/photos/3997379/pexels-photo-3997379.jpeg?auto=compress&cs=tinysrgb&w=700" alt="Luxury manicure and gel nail extension art" loading="lazy">
-              </div>
-            </div>
+            </article>
           </div>
         </div>
       </div>
@@ -464,7 +446,7 @@
     </section>
 
     <!-- ======================================================================
-         5. ALTERNATIVE COURSE HIGHLIGHTS (EDITORIAL TUITION LEDGER)
+         5. REDESIGNED ACCREDITED DIPLOMA PROGRAMS (3-COLUMN PODIUM SHOWCASE)
          ====================================================================== -->
     <section class="section-py-lg bg-beige">
       <div class="container">
@@ -482,84 +464,144 @@
           </div>
         </div>
 
-        <div class="row g-4">
-          <div class="col-12 gsap-reveal">
-            <div class="p-4 p-lg-5 bg-surface border rounded-1" style="border-color: var(--border-subtle) !important;">
-              <div class="row align-items-center g-4">
-                <div class="col-lg-3">
-                  <span class="showcase-meta">Program 01 &bull; 8 Weeks</span>
-                  <h3 class="h2 font-serif mb-1">Master Bridal Artistry</h3>
-                  <div class="package-price text-gold">₹45,000</div>
-                </div>
-                <div class="col-lg-6">
-                  <p class="small text-secondary-luxury mb-2">
-                    An intensive 160-hour bridal and editorial makeup program covering HD airbrush, glass skin, and international bridal hair styling.
-                  </p>
-                  <div class="d-flex flex-wrap gap-3 small text-muted-luxury">
-                    <span><i class="bi bi-check2 text-gold me-1"></i> 160 Live Model Practical Hours</span>
-                    <span><i class="bi bi-check2 text-gold me-1"></i> 5-Look Studio Portfolio Shoot</span>
-                    <span><i class="bi bi-check2 text-gold me-1"></i> Pro Airbrush &amp; Vanity Practice</span>
+        <div class="row g-4 align-items-stretch">
+          <!-- Program 01 -->
+          <div class="col-lg-4 gsap-reveal">
+            <article class="diploma-podium-card">
+              <div class="diploma-podium-media">
+                <img src="https://images.pexels.com/photos/457701/pexels-photo-457701.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Master Bridal Artistry makeup practical" loading="lazy">
+                <span class="diploma-duration-pill">8 Weeks &bull; 160 Practical Hrs</span>
+              </div>
+              <div class="diploma-podium-body">
+                <span class="showcase-meta">Program 01 &bull; Makeup Faculty</span>
+                <h3 class="h4 font-serif mb-2">Master Bridal Artistry</h3>
+                <p class="small text-secondary-luxury mb-3">
+                  An intensive 160-hour bridal and editorial makeup track covering HD airbrush, glass skin, and classic bridal hair styling.
+                </p>
+
+                <div class="diploma-price-row">
+                  <div>
+                    <span class="font-serif fs-2 text-gold lh-1">₹45,000</span>
+                    <span class="d-block small text-muted-luxury" style="font-size: 0.72rem;">Full Tuition + Vanity Kit Access</span>
                   </div>
+                  <span class="badge bg-beige text-gold border" style="border-color: var(--border-gold) !important;">0% EMI</span>
                 </div>
-                <div class="col-lg-3 text-lg-end">
+
+                <ul class="diploma-feature-list">
+                  <li><i class="bi bi-check2-circle"></i><span>160 Live Model Practical Hours</span></li>
+                  <li><i class="bi bi-check2-circle"></i><span>5-Look Studio Portfolio Shoot</span></li>
+                  <li><i class="bi bi-check2-circle"></i><span>Pro Airbrush &amp; Vanity Practice</span></li>
+                </ul>
+
+                <div class="mt-auto">
                   <a href="admissions.html?package=Master+Bridal+Artistry&session=Bridal+Makeup#enquiry-form" class="btn-luxury btn-luxury-outline w-100">
                     Apply for Bridal
                   </a>
                 </div>
               </div>
-            </div>
+            </article>
           </div>
 
-          <div class="col-12 gsap-reveal">
-            <div class="p-4 p-lg-5 bg-surface border rounded-1" style="border-color: var(--border-gold) !important; box-shadow: var(--shadow-sm);">
-              <div class="row align-items-center g-4">
-                <div class="col-lg-3">
-                  <span class="showcase-meta">Program 02 &bull; 24 Weeks Flagship</span>
-                  <h3 class="h2 font-serif mb-1">Grand Master Cosmetology</h3>
-                  <div class="package-price text-gold">₹85,000</div>
+          <!-- Program 02 (Featured Flagship Track) -->
+          <div class="col-lg-4 gsap-reveal">
+            <article class="diploma-podium-card flagship">
+              <div class="diploma-podium-media">
+                <div class="diploma-flagship-banner">
+                  Most Popular Career Diploma &bull; Dual Certification
                 </div>
-                <div class="col-lg-6">
-                  <p class="small text-secondary-luxury mb-2">
-                    Our complete 600-hour career diploma uniting bridal makeup, clinical dermal aesthetics, hair chemical couture, and gel nail extensions.
-                  </p>
-                  <div class="d-flex flex-wrap gap-3 small text-muted-luxury">
-                    <span><i class="bi bi-check2 text-gold me-1"></i> Dual International &amp; National Diploma</span>
-                    <span><i class="bi bi-check2 text-gold me-1"></i> 24-Piece Take-Home Pro Vanity Kit</span>
-                    <span><i class="bi bi-check2 text-gold me-1"></i> 100% Placement &amp; Salon Startup Cell</span>
+                <img src="https://images.pexels.com/photos/3065209/pexels-photo-3065209.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Grand Master Cosmetology Diploma student training" loading="lazy">
+                <span class="diploma-duration-pill">24 Weeks &bull; 600 Practical Hrs</span>
+              </div>
+              <div class="diploma-podium-body">
+                <span class="showcase-meta">Program 02 &bull; Flagship Conservatory</span>
+                <h3 class="h4 font-serif mb-2">Grand Master Cosmetology</h3>
+                <p class="small text-secondary-luxury mb-3">
+                  Our complete 600-hour career diploma uniting bridal makeup, clinical dermal therapy, hair couture, and gel nail extensions.
+                </p>
+
+                <div class="diploma-price-row">
+                  <div>
+                    <span class="font-serif fs-2 text-gold lh-1">₹85,000</span>
+                    <span class="d-block small text-muted-luxury" style="font-size: 0.72rem;">Includes 24-Piece Take-Home Pro Kit</span>
                   </div>
+                  <span class="badge bg-beige text-gold border" style="border-color: var(--border-gold) !important;">Flagship</span>
                 </div>
-                <div class="col-lg-3 text-lg-end">
+
+                <ul class="diploma-feature-list">
+                  <li><i class="bi bi-check2-circle"></i><span>Dual International &amp; National Diploma</span></li>
+                  <li><i class="bi bi-check2-circle"></i><span>24-Piece Take-Home Pro Vanity Kit</span></li>
+                  <li><i class="bi bi-check2-circle"></i><span>100% Placement &amp; Salon Startup Cell</span></li>
+                </ul>
+
+                <div class="mt-auto">
                   <a href="admissions.html?package=Grand+Master+Cosmetology&session=Cosmetology#enquiry-form" class="btn-luxury btn-luxury-gold w-100">
                     Apply for Diploma
                   </a>
                 </div>
               </div>
-            </div>
+            </article>
           </div>
 
-          <div class="col-12 gsap-reveal">
-            <div class="p-4 p-lg-5 bg-surface border rounded-1" style="border-color: var(--border-subtle) !important;">
-              <div class="row align-items-center g-4">
-                <div class="col-lg-3">
-                  <span class="showcase-meta">Program 03 &bull; 10 Weeks</span>
-                  <h3 class="h2 font-serif mb-1">Clinical Aesthetics &amp; Skin</h3>
-                  <div class="package-price text-gold">₹62,000</div>
-                </div>
-                <div class="col-lg-6">
-                  <p class="small text-secondary-luxury mb-2">
-                    Designed for future medical estheticians and skin therapists—mastering chemical peels, hydra-facials, microcurrent, and dermal diagnostics.
-                  </p>
-                  <div class="d-flex flex-wrap gap-3 small text-muted-luxury">
-                    <span><i class="bi bi-check2 text-gold me-1"></i> 200 Hours Clinical Lab Training</span>
-                    <span><i class="bi bi-check2 text-gold me-1"></i> 8 FDA-Cleared Machine Modalities</span>
-                    <span><i class="bi bi-check2 text-gold me-1"></i> Accredited Esthetician Certificate</span>
+          <!-- Program 03 -->
+          <div class="col-lg-4 gsap-reveal">
+            <article class="diploma-podium-card">
+              <div class="diploma-podium-media">
+                <img src="https://images.pexels.com/photos/3757942/pexels-photo-3757942.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Clinical Aesthetics and Skincare machine modality training" loading="lazy">
+                <span class="diploma-duration-pill">10 Weeks &bull; 200 Clinical Hrs</span>
+              </div>
+              <div class="diploma-podium-body">
+                <span class="showcase-meta">Program 03 &bull; Dermal Science Lab</span>
+                <h3 class="h4 font-serif mb-2">Clinical Aesthetics &amp; Skin</h3>
+                <p class="small text-secondary-luxury mb-3">
+                  Designed for future medical estheticians mastering chemical peels, hydra-facials, microcurrent, and dermal diagnostics.
+                </p>
+
+                <div class="diploma-price-row">
+                  <div>
+                    <span class="font-serif fs-2 text-gold lh-1">₹62,000</span>
+                    <span class="d-block small text-muted-luxury" style="font-size: 0.72rem;">FDA-Cleared Dermal Lab Access</span>
                   </div>
+                  <span class="badge bg-beige text-gold border" style="border-color: var(--border-gold) !important;">0% EMI</span>
                 </div>
-                <div class="col-lg-3 text-lg-end">
+
+                <ul class="diploma-feature-list">
+                  <li><i class="bi bi-check2-circle"></i><span>200 Hours Clinical Lab Training</span></li>
+                  <li><i class="bi bi-check2-circle"></i><span>8 FDA-Cleared Machine Modalities</span></li>
+                  <li><i class="bi bi-check2-circle"></i><span>Accredited Esthetician Certificate</span></li>
+                </ul>
+
+                <div class="mt-auto">
                   <a href="admissions.html?package=Clinical+Aesthetics+%26+Skin&session=Clinical+Aesthetics#enquiry-form" class="btn-luxury btn-luxury-outline w-100">
                     Apply for Aesthetics
                   </a>
                 </div>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <!-- Bottom Tuition & Scholarship Guarantee Strip -->
+        <div class="diploma-guarantee-bar gsap-reveal">
+          <div class="row g-3 align-items-center justify-content-between">
+            <div class="col-md-4 d-flex align-items-center gap-3">
+              <i class="bi bi-credit-card text-gold fs-4"></i>
+              <div>
+                <strong class="d-block small text-uppercase" style="letter-spacing: 0.1em;">0% No-Cost EMI</strong>
+                <span class="small text-muted-luxury">Split tuition over 3 to 6 monthly installments.</span>
+              </div>
+            </div>
+            <div class="col-md-4 d-flex align-items-center gap-3">
+              <i class="bi bi-stars text-gold fs-4"></i>
+              <div>
+                <strong class="d-block small text-uppercase" style="letter-spacing: 0.1em;">₹10,000 Dual-Course Grant</strong>
+                <span class="small text-muted-luxury">Combine any two certificate tracks for vanity kit credit.</span>
+              </div>
+            </div>
+            <div class="col-md-4 d-flex align-items-center gap-3">
+              <i class="bi bi-patch-check text-gold fs-4"></i>
+              <div>
+                <strong class="d-block small text-uppercase" style="letter-spacing: 0.1em;">QR-Verified Certificates</strong>
+                <span class="small text-muted-luxury">Accepted by luxury salons &amp; clinics internationally.</span>
               </div>
             </div>
           </div>
@@ -599,6 +641,35 @@
         </div>
       </div>
     </section>
+
+    <!-- ======================================================================
+         7. FINAL ADMISSIONS CTA SECTION
+         ====================================================================== -->
+    <section class="section-py-lg bg-beige position-relative overflow-hidden">
+      <div class="container">
+        <div class="luxury-form-card text-center mx-auto py-5 px-4 px-md-5 gsap-reveal" style="max-width: 880px;">
+          <span class="eyebrow center">Admissions Open &bull; 2026 Batch Intake</span>
+          <h2 class="display-editorial mb-3">
+            Transform Your Passion Into an <em>Accredited</em> Beauty Career
+          </h2>
+          <p class="section-subtitle mx-auto mb-4" style="max-width: 620px;">
+            Book a private 1-on-1 campus tour, observe a live bridal &amp; clinical aesthetics batch, and customize your
+            accredited diploma track with flexible 0% EMI options.
+          </p>
+          <div class="d-flex flex-wrap justify-content-center align-items-center gap-3">
+            <a href="admissions.html#enquiry-form" class="btn-luxury btn-luxury-primary">
+              <span>Apply for Admission Now</span>
+              <i class="bi bi-arrow-right"></i>
+            </a>
+            <a href="https://wa.me/919820456789?text=Hello%20Aurelia%20Academy%2C%20I%20would%20love%20to%20enquire%20about%20beautician%20courses%20and%20upcoming%20batches."
+              target="_blank" rel="noopener noreferrer" class="btn-luxury btn-luxury-outline">
+              <i class="bi bi-whatsapp text-gold"></i>
+              <span>WhatsApp Admissions Desk</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 
   <!-- ========================================================================
@@ -610,11 +681,17 @@
         <div class="col-lg-4">
           <a class="navbar-brand-luxury mb-3 d-inline-flex" href="index.html">
             <svg class="brand-icon-svg" viewBox="0 0 64 64" fill="none" aria-hidden="true">
-              <rect x="2" y="2" width="60" height="60" rx="14" stroke="#B45474" stroke-width="2.2"/>
-              <path d="M18 46V27C18 19.268 24.268 13 32 13C39.732 13 46 19.268 46 27V46" stroke="#B45474" stroke-width="2.2" stroke-linecap="round"/>
-              <path d="M32 21C28.5 25.5 27 29.5 32 34C37 29.5 35.5 25.5 32 21Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
-              <path d="M22 44C24.8 39 28.2 36.8 32 36.8C35.8 36.8 39.2 39 42 44" stroke="#B45474" stroke-width="2" stroke-linecap="round"/>
-              <path d="M32 7L33.2 9.8L36 11L33.2 12.2L32 15L30.8 12.2L28 11L30.8 9.8L32 7Z" fill="#B45474"/>
+              <circle cx="32" cy="32" r="29" stroke="var(--accent-gold, #1B6B52)" stroke-width="2.2"/>
+              <circle cx="32" cy="32" r="25" stroke="var(--accent-rose, #C59B5F)" stroke-width="1" stroke-opacity="0.55"/>
+              <path d="M20.5 31C16.8 26.2 17.2 18.2 24 16.2C30.8 18.2 31.2 26.2 27.5 31Z" fill="var(--accent-rose, #C59B5F)" fill-opacity="0.22" stroke="var(--accent-gold, #1B6B52)" stroke-width="2" stroke-linejoin="round"/>
+              <path d="M22.2 21.5V28.5M25.8 21.5V28.5" stroke="var(--accent-gold, #1B6B52)" stroke-width="1.5" stroke-linecap="round"/>
+              <rect x="20.5" y="31" width="7" height="3.8" rx="1" stroke="var(--accent-rose, #C59B5F)" stroke-width="1.8"/>
+              <path d="M21.2 34.8H26.8L25.6 48.2C25.5 49.2 22.5 49.2 22.4 48.2Z" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round"/>
+              <path d="M37 29.5V20.5L43 16.5V29.5Z" fill="var(--accent-gold, #1B6B52)" fill-opacity="0.88" stroke="var(--accent-gold, #1B6B52)" stroke-width="1.6" stroke-linejoin="round"/>
+              <rect x="36" y="29.5" width="8" height="4.2" rx="0.8" stroke="var(--accent-rose, #C59B5F)" stroke-width="1.8"/>
+              <rect x="35" y="33.7" width="10" height="15" rx="2" stroke="currentColor" stroke-width="1.9"/>
+              <path d="M32 8.5L33.1 11.1L35.7 12.2L33.1 13.3L32 15.9L30.9 13.3L28.3 12.2L30.9 11.1Z" fill="var(--accent-rose, #C59B5F)"/>
+              <path d="M20 52H44" stroke="var(--accent-rose, #C59B5F)" stroke-width="1.5" stroke-linecap="round" opacity="0.7"/>
             </svg>
             <span class="brand-text-wrap">
               <span class="brand-title">Aurelia Academy</span>
@@ -648,17 +725,17 @@
             <li><a href="certification.html">Certification</a></li>
             <li><a href="courses.html">Courses &amp; Tuition</a></li>
             <li><a href="showcase.html">Student Showcase</a></li>
-            <li><a href="admissions.html">Admissions</a></li>
+            <li><a href="admissions.html">Contact</a></li>
           </ul>
         </div>
 
         <div class="col-6 col-md-4 col-lg-3">
-          <h3 class="footer-heading">Student Portal &amp; Faculties</h3>
+          <h3 class="footer-heading">Dashboard &amp; Faculties</h3>
           <ul class="footer-links">
             <li><a href="courses.html#maternity-collection">Bridal &amp; Airbrush Makeup</a></li>
             <li><a href="courses.html#newborn-collection">Clinical Cosmetology &amp; Skin</a></li>
             <li><a href="courses.html#milestone-collection">Hair Couture &amp; Nail Artistry</a></li>
-            <li><a href="portal.html">Student Dashboard Portal</a></li>
+            <li><a href="portal.html">Dashboard</a></li>
             <li><a href="login.html">Student Portal Login</a></li>
             <li><a href="signup.html">Student Registration</a></li>
           </ul>
