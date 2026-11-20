@@ -21,36 +21,87 @@
 </head>
 <body>
 
+  <!-- ========================================================================
+       DASHBOARD TOP HEADER (BRAND LOGO LEFT, THEME + RTL + PROFILE RIGHT)
+       ======================================================================== -->
+  <header class="dashboard-topbar">
+    <div class="dashboard-topbar-inner">
+      <!-- Left Side: Brand Logo & Name Only -->
+      <a class="navbar-brand-luxury mb-0" href="index.html">
+        <svg class="brand-icon-svg" viewBox="0 0 64 64" fill="none" aria-hidden="true">
+          <circle cx="32" cy="32" r="29" stroke="var(--accent-gold, #1B6B52)" stroke-width="2.2"/>
+          <circle cx="32" cy="32" r="25" stroke="var(--accent-rose, #C59B5F)" stroke-width="1" stroke-opacity="0.55"/>
+          <path d="M20.5 31C16.8 26.2 17.2 18.2 24 16.2C30.8 18.2 31.2 26.2 27.5 31Z" fill="var(--accent-rose, #C59B5F)" fill-opacity="0.22" stroke="var(--accent-gold, #1B6B52)" stroke-width="2" stroke-linejoin="round"/>
+          <path d="M22.2 21.5V28.5M25.8 21.5V28.5" stroke="var(--accent-gold, #1B6B52)" stroke-width="1.5" stroke-linecap="round"/>
+          <rect x="20.5" y="31" width="7" height="3.8" rx="1" stroke="var(--accent-rose, #C59B5F)" stroke-width="1.8"/>
+          <path d="M21.2 34.8H26.8L25.6 48.2C25.5 49.2 22.5 49.2 22.4 48.2Z" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round"/>
+          <path d="M37 29.5V20.5L43 16.5V29.5Z" fill="var(--accent-gold, #1B6B52)" fill-opacity="0.88" stroke="var(--accent-gold, #1B6B52)" stroke-width="1.6" stroke-linejoin="round"/>
+          <rect x="36" y="29.5" width="8" height="4.2" rx="0.8" stroke="var(--accent-rose, #C59B5F)" stroke-width="1.8"/>
+          <rect x="35" y="33.7" width="10" height="15" rx="2" stroke="currentColor" stroke-width="1.9"/>
+          <path d="M32 8.5L33.1 11.1L35.7 12.2L33.1 13.3L32 15.9L30.9 13.3L28.3 12.2L30.9 11.1Z" fill="var(--accent-rose, #C59B5F)"/>
+          <path d="M20 52H44" stroke="var(--accent-rose, #C59B5F)" stroke-width="1.5" stroke-linecap="round" opacity="0.7"/>
+        </svg>
+        <span class="brand-text-wrap">
+          <span class="brand-title">Aurelia Academy</span>
+          <span class="brand-sub">Beautician &amp; Cosmetology</span>
+        </span>
+      </a>
+
+      <!-- Right Side: Theme Icon, RTL Icon & Profile Image -->
+      <div class="dashboard-header-actions">
+        <button type="button" class="theme-toggle-btn" aria-label="Toggle theme" title="Toggle theme">
+          <i class="bi bi-moon-stars"></i>
+        </button>
+        <button type="button" class="rtl-toggle-btn" aria-label="Toggle RTL layout" title="Toggle RTL layout">RTL</button>
+
+        <div class="dropdown">
+          <button type="button" class="dashboard-profile-btn" id="profileMenuBtn" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false" aria-label="Student profile menu" title="Ananya Sharma Profile">
+            <img src="https://images.pexels.com/photos/3762800/pexels-photo-3762800.jpeg?auto=compress&cs=tinysrgb&w=200" alt="Ananya Sharma">
+          </button>
+          <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="profileMenuBtn">
+            <li class="px-3 py-2 border-bottom mb-1" style="border-color: var(--border-subtle) !important;">
+              <strong class="d-block font-serif fs-6">Ananya Sharma</strong>
+              <span class="small text-muted-luxury" style="font-size: 0.72rem;">Roll ID #AA-2026-B4</span>
+            </li>
+            <li>
+              <button type="button" class="dropdown-item" data-jump-tab="panel-overview">
+                <i class="bi bi-grid text-gold"></i>
+                <span>Dashboard Overview</span>
+              </button>
+            </li>
+            <li>
+              <button type="button" class="dropdown-item" data-jump-tab="panel-prints">
+                <i class="bi bi-award text-gold"></i>
+                <span>My Certificates</span>
+              </button>
+            </li>
+            <li><hr class="dropdown-divider my-1"></li>
+            <li>
+              <a class="dropdown-item" href="login.html">
+                <i class="bi bi-box-arrow-left text-gold"></i>
+                <span>Sign Out</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <button type="button" id="dashboardMenuToggle" class="dashboard-menu-toggle-btn d-xl-none" aria-label="Open side menu">
+          <i class="bi bi-list fs-5"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
   <!-- Mobile Sidebar Backdrop -->
   <div id="sidebarBackdrop" class="sidebar-backdrop"></div>
 
   <div class="dashboard-layout">
     <!-- ======================================================================
-         FULL-HEIGHT LEFT SIDEBAR (TOP TO BOTTOM WITH LOGOUT BUTTON)
+         LEFT NAVIGATION SIDEBAR
          ====================================================================== -->
     <aside id="dashboardSidebar" class="dashboard-sidebar" aria-label="Student Dashboard Menu">
-      <!-- Top: Brand Icon + Name & Primary Navigation -->
+      <!-- Top: Primary Navigation -->
       <div>
-        <a class="navbar-brand-luxury mb-4 pb-3 border-bottom d-flex" style="border-color: var(--border-subtle) !important;" href="index.html">
-          <svg class="brand-icon-svg" viewBox="0 0 64 64" fill="none" aria-hidden="true">
-            <circle cx="32" cy="32" r="29" stroke="var(--accent-gold, #1B6B52)" stroke-width="2.2"/>
-            <circle cx="32" cy="32" r="25" stroke="var(--accent-rose, #C59B5F)" stroke-width="1" stroke-opacity="0.55"/>
-            <path d="M20.5 31C16.8 26.2 17.2 18.2 24 16.2C30.8 18.2 31.2 26.2 27.5 31Z" fill="var(--accent-rose, #C59B5F)" fill-opacity="0.22" stroke="var(--accent-gold, #1B6B52)" stroke-width="2" stroke-linejoin="round"/>
-            <path d="M22.2 21.5V28.5M25.8 21.5V28.5" stroke="var(--accent-gold, #1B6B52)" stroke-width="1.5" stroke-linecap="round"/>
-            <rect x="20.5" y="31" width="7" height="3.8" rx="1" stroke="var(--accent-rose, #C59B5F)" stroke-width="1.8"/>
-            <path d="M21.2 34.8H26.8L25.6 48.2C25.5 49.2 22.5 49.2 22.4 48.2Z" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round"/>
-            <path d="M37 29.5V20.5L43 16.5V29.5Z" fill="var(--accent-gold, #1B6B52)" fill-opacity="0.88" stroke="var(--accent-gold, #1B6B52)" stroke-width="1.6" stroke-linejoin="round"/>
-            <rect x="36" y="29.5" width="8" height="4.2" rx="0.8" stroke="var(--accent-rose, #C59B5F)" stroke-width="1.8"/>
-            <rect x="35" y="33.7" width="10" height="15" rx="2" stroke="currentColor" stroke-width="1.9"/>
-            <path d="M32 8.5L33.1 11.1L35.7 12.2L33.1 13.3L32 15.9L30.9 13.3L28.3 12.2L30.9 11.1Z" fill="var(--accent-rose, #C59B5F)"/>
-            <path d="M20 52H44" stroke="var(--accent-rose, #C59B5F)" stroke-width="1.5" stroke-linecap="round" opacity="0.7"/>
-          </svg>
-          <span class="brand-text-wrap">
-            <span class="brand-title" style="font-size: 1.25rem;">Aurelia Academy</span>
-            <span class="brand-sub">Student Portal</span>
-          </span>
-        </a>
-
         <div class="mb-3 px-2">
           <span class="small text-uppercase text-muted-luxury fw-semibold" style="font-size: 0.65rem; letter-spacing: 0.16em;">
             Student Dashboard
@@ -81,18 +132,8 @@
         </nav>
       </div>
 
-      <!-- Bottom: Theme/RTL Quick Controls + Logout Button -->
+      <!-- Bottom: Logout Button -->
       <div class="pt-3 border-top" style="border-color: var(--border-subtle) !important;">
-        <div class="d-flex align-items-center justify-content-between mb-3 px-1">
-          <span class="small text-muted-luxury">Appearance</span>
-          <div class="d-flex align-items-center gap-2">
-            <button type="button" class="theme-toggle-btn" aria-label="Toggle theme">
-              <i class="bi bi-moon-stars"></i>
-            </button>
-            <button type="button" class="rtl-toggle-btn" aria-label="Toggle RTL layout">RTL</button>
-          </div>
-        </div>
-
         <a href="login.html" class="dashboard-logout-btn">
           <i class="bi bi-box-arrow-left"></i>
           <span>Logout</span>
@@ -104,7 +145,7 @@
          MAIN STUDENT WORKSPACE
          ====================================================================== -->
     <main class="dashboard-main">
-      <!-- Top Workspace Header -->
+      <!-- Workspace Title Bar -->
       <div class="d-flex flex-wrap justify-content-between align-items-center gap-3 pb-4 mb-4 border-bottom" style="border-color: var(--border-subtle) !important;">
         <div>
           <span class="small text-gold text-uppercase fw-semibold d-block" style="letter-spacing: 0.14em; font-size: 0.68rem;">
@@ -114,16 +155,9 @@
         </div>
 
         <div class="d-flex align-items-center gap-2 ms-auto">
-          <span class="badge bg-surface border text-secondary-luxury px-3 py-2 fw-normal d-none d-lg-inline-block" style="border-color: var(--border-gold) !important;">
+          <span class="badge bg-surface border text-secondary-luxury px-3 py-2 fw-normal" style="border-color: var(--border-gold) !important;">
             <i class="bi bi-patch-check-fill text-gold me-1"></i> Grand Master Cosmetology Diploma
           </span>
-          <button type="button" class="rtl-toggle-btn d-none d-xl-inline-flex" aria-label="Toggle RTL layout">RTL</button>
-          <button type="button" class="theme-toggle-btn d-none d-xl-inline-flex" aria-label="Toggle theme">
-            <i class="bi bi-moon-stars"></i>
-          </button>
-          <button type="button" id="dashboardMenuToggle" class="btn btn-outline-secondary d-xl-none px-2 py-1" aria-label="Open side menu">
-            <i class="bi bi-list fs-4"></i>
-          </button>
         </div>
       </div>
 
@@ -299,15 +333,15 @@
       </section>
 
       <!-- ====================================================================
-           PANEL 3: PRACTICAL LOGS & GRADED STUDENT WORK PORTFOLIO
+           PANEL 3: PRACTICAL LOGS & GRADED ASSESSMENT RECORDS (TEXT-ONLY)
            ==================================================================== -->
       <section id="panel-galleries" class="dashboard-panel">
         <div class="d-flex flex-wrap justify-content-between align-items-end gap-3 mb-4">
           <div>
             <span class="eyebrow">Verified Practical Assessment Logbook</span>
-            <h2 class="h3 font-serif mb-1">Graded Practical Logs &amp; Model Portfolio</h2>
+            <h2 class="h3 font-serif mb-1">Graded Practical Logs &amp; Faculty Evaluations</h2>
             <p class="small text-secondary-luxury mb-0">
-              Tap the heart icon to shortlist your favorite practical plates for your graduation lookbook, or click any log to inspect examiner notes.
+              Review signed faculty assessments, practical hours, and examination grades—tap the heart icon to shortlist logs for your graduation transcript.
             </p>
           </div>
           <button type="button" class="btn-luxury btn-luxury-gold" data-jump-tab="panel-prints">
@@ -318,123 +352,123 @@
 
         <div class="row g-4 justify-content-center">
           <div class="col-md-6 col-xl-4">
-            <div class="dashboard-gallery-card">
-              <div class="gallery-card ratio-portrait" tabindex="0" role="button"
-                   data-title="Log #104 — Royal Bridal HD Airbrush (Grade: A+)"
-                   data-meta="Bridal Practical Exam • 24 Hours Logged"
-                   data-full="https://images.pexels.com/photos/2681751/pexels-photo-2681751.jpeg?auto=compress&cs=tinysrgb&w=1400">
-                <img src="https://images.pexels.com/photos/2681751/pexels-photo-2681751.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Royal bridal HD airbrush practical log">
-              </div>
-              <div class="p-3 d-flex justify-content-between align-items-center">
-                <div>
-                  <strong class="d-block font-serif fs-5">Log #104 — Bridal Airbrush</strong>
-                  <span class="small text-muted-luxury">24 Hrs &bull; Grade: A+ Distinction</span>
-                </div>
+            <article class="dashboard-log-card">
+              <div class="d-flex justify-content-between align-items-center mb-3">
+                <span class="badge bg-beige text-gold border" style="border-color: var(--border-gold) !important;">Log #104 &bull; Grade: A+</span>
                 <button type="button" class="favorite-heart-btn liked" aria-label="Shortlist practical log">
                   <i class="bi bi-heart-fill"></i>
                 </button>
               </div>
-            </div>
+              <span class="small text-gold text-uppercase fw-semibold mb-1" style="letter-spacing: 0.12em; font-size: 0.68rem;">Bridal Practical Exam &bull; 24 Hours</span>
+              <h3 class="h4 font-serif mb-2">Royal Bridal HD Airbrush</h3>
+              <p class="small text-secondary-luxury log-notes mb-3">
+                Examiner Notes: Seamless silicone airbrush base blending, waterproof tear-proof eye sculpting, and strict station hygiene confirmed across 3 timed live models.
+              </p>
+              <div class="dashboard-log-card-footer small">
+                <span class="text-muted-luxury">Score: 98 / 100</span>
+                <strong class="text-gold">A+ Distinction</strong>
+              </div>
+            </article>
           </div>
 
           <div class="col-md-6 col-xl-4">
-            <div class="dashboard-gallery-card">
-              <div class="gallery-card ratio-portrait" tabindex="0" role="button"
-                   data-title="Log #108 — Hydra-Dermabrasion &amp; Peel Protocol (Grade: A)"
-                   data-meta="Clinical Skincare Ward • 18 Hours Logged"
-                   data-full="https://images.pexels.com/photos/3757942/pexels-photo-3757942.jpeg?auto=compress&cs=tinysrgb&w=1400">
-                <img src="https://images.pexels.com/photos/3757942/pexels-photo-3757942.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Hydra-dermabrasion clinical practical log">
-              </div>
-              <div class="p-3 d-flex justify-content-between align-items-center">
-                <div>
-                  <strong class="d-block font-serif fs-5">Log #108 — Hydra-Facial Lab</strong>
-                  <span class="small text-muted-luxury">18 Hrs &bull; Grade: A Verified</span>
-                </div>
+            <article class="dashboard-log-card">
+              <div class="d-flex justify-content-between align-items-center mb-3">
+                <span class="badge bg-beige text-gold border" style="border-color: var(--border-gold) !important;">Log #108 &bull; Grade: A</span>
                 <button type="button" class="favorite-heart-btn liked" aria-label="Shortlist practical log">
                   <i class="bi bi-heart-fill"></i>
                 </button>
               </div>
-            </div>
+              <span class="small text-gold text-uppercase fw-semibold mb-1" style="letter-spacing: 0.12em; font-size: 0.68rem;">Clinical Skincare Ward &bull; 18 Hours</span>
+              <h3 class="h4 font-serif mb-2">Hydra-Dermabrasion &amp; Peel Protocol</h3>
+              <p class="small text-secondary-luxury log-notes mb-3">
+                Examiner Notes: Accurate Fitzpatrick skin typing, calm enzymatic pH neutralization timing, and thorough pre- and post-treatment client contraindication screening.
+              </p>
+              <div class="dashboard-log-card-footer small">
+                <span class="text-muted-luxury">Score: 94 / 100</span>
+                <strong class="text-gold">Faculty Verified</strong>
+              </div>
+            </article>
           </div>
 
           <div class="col-md-6 col-xl-4">
-            <div class="dashboard-gallery-card">
-              <div class="gallery-card ratio-portrait" tabindex="0" role="button"
-                   data-title="Log #115 — Editorial Cut-Crease &amp; Graphic Liner (Grade: A+)"
-                   data-meta="Editorial Makeup Faculty • 16 Hours Logged"
-                   data-full="https://images.pexels.com/photos/457701/pexels-photo-457701.jpeg?auto=compress&cs=tinysrgb&w=1400">
-                <img src="https://images.pexels.com/photos/457701/pexels-photo-457701.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Editorial eye makeup practical log">
-              </div>
-              <div class="p-3 d-flex justify-content-between align-items-center">
-                <div>
-                  <strong class="d-block font-serif fs-5">Log #115 — Editorial Eye</strong>
-                  <span class="small text-muted-luxury">16 Hrs &bull; Grade: A+ Distinction</span>
-                </div>
+            <article class="dashboard-log-card">
+              <div class="d-flex justify-content-between align-items-center mb-3">
+                <span class="badge bg-beige text-gold border" style="border-color: var(--border-gold) !important;">Log #115 &bull; Grade: A+</span>
                 <button type="button" class="favorite-heart-btn" aria-label="Shortlist practical log">
                   <i class="bi bi-heart"></i>
                 </button>
               </div>
-            </div>
+              <span class="small text-gold text-uppercase fw-semibold mb-1" style="letter-spacing: 0.12em; font-size: 0.68rem;">Editorial Makeup Faculty &bull; 16 Hours</span>
+              <h3 class="h4 font-serif mb-2">Editorial Cut-Crease &amp; Graphic Liner</h3>
+              <p class="small text-secondary-luxury log-notes mb-3">
+                Examiner Notes: High-precision symmetry under 5600K studio strobes with glass-skin editorial highlight placement and luminous lip lacquer blending.
+              </p>
+              <div class="dashboard-log-card-footer small">
+                <span class="text-muted-luxury">Score: 97 / 100</span>
+                <strong class="text-gold">A+ Distinction</strong>
+              </div>
+            </article>
           </div>
 
           <div class="col-md-6 col-xl-4">
-            <div class="dashboard-gallery-card">
-              <div class="gallery-card ratio-portrait" tabindex="0" role="button"
-                   data-title="Log #201 — Parisian Bridal Chignon &amp; Texturing (Grade: A)"
-                   data-meta="Hair Couture Lounge • 20 Hours Logged"
-                   data-full="https://images.pexels.com/photos/3993449/pexels-photo-3993449.jpeg?auto=compress&cs=tinysrgb&w=1400">
-                <img src="https://images.pexels.com/photos/3993449/pexels-photo-3993449.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Bridal hair chignon practical log">
-              </div>
-              <div class="p-3 d-flex justify-content-between align-items-center">
-                <div>
-                  <strong class="d-block font-serif fs-5">Log #201 — Bridal Chignon</strong>
-                  <span class="small text-muted-luxury">20 Hrs &bull; Grade: A Verified</span>
-                </div>
+            <article class="dashboard-log-card">
+              <div class="d-flex justify-content-between align-items-center mb-3">
+                <span class="badge bg-beige text-gold border" style="border-color: var(--border-gold) !important;">Log #201 &bull; Grade: A</span>
                 <button type="button" class="favorite-heart-btn" aria-label="Shortlist practical log">
                   <i class="bi bi-heart"></i>
                 </button>
               </div>
-            </div>
+              <span class="small text-gold text-uppercase fw-semibold mb-1" style="letter-spacing: 0.12em; font-size: 0.68rem;">Hair Couture Lounge &bull; 20 Hours</span>
+              <h3 class="h4 font-serif mb-2">Parisian Bridal Chignon &amp; Texturing</h3>
+              <p class="small text-secondary-luxury log-notes mb-3">
+                Examiner Notes: Balanced section tension, heat-protectant protocol mastery, and durable pin anchoring for heavy bridal veil and floral adornment weight.
+              </p>
+              <div class="dashboard-log-card-footer small">
+                <span class="text-muted-luxury">Score: 93 / 100</span>
+                <strong class="text-gold">Faculty Verified</strong>
+              </div>
+            </article>
           </div>
 
           <div class="col-md-6 col-xl-4">
-            <div class="dashboard-gallery-card">
-              <div class="gallery-card ratio-portrait" tabindex="0" role="button"
-                   data-title="Log #209 — Hard Gel Nail Extension &amp; Chrome Art (Grade: A+)"
-                   data-meta="Nail Architecture Bar • 14 Hours Logged"
-                   data-full="https://images.pexels.com/photos/3997379/pexels-photo-3997379.jpeg?auto=compress&cs=tinysrgb&w=1400">
-                <img src="https://images.pexels.com/photos/3997379/pexels-photo-3997379.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Gel nail extension practical log">
-              </div>
-              <div class="p-3 d-flex justify-content-between align-items-center">
-                <div>
-                  <strong class="d-block font-serif fs-5">Log #209 — Gel Extensions</strong>
-                  <span class="small text-muted-luxury">14 Hrs &bull; Grade: A+ Distinction</span>
-                </div>
+            <article class="dashboard-log-card">
+              <div class="d-flex justify-content-between align-items-center mb-3">
+                <span class="badge bg-beige text-gold border" style="border-color: var(--border-gold) !important;">Log #209 &bull; Grade: A+</span>
                 <button type="button" class="favorite-heart-btn" aria-label="Shortlist practical log">
                   <i class="bi bi-heart"></i>
                 </button>
               </div>
-            </div>
+              <span class="small text-gold text-uppercase fw-semibold mb-1" style="letter-spacing: 0.12em; font-size: 0.68rem;">Nail Architecture Bar &bull; 14 Hours</span>
+              <h3 class="h4 font-serif mb-2">Hard Gel Extension &amp; Chrome Art</h3>
+              <p class="small text-secondary-luxury log-notes mb-3">
+                Examiner Notes: Clean Russian E-file cuticle preparation without plate trauma, uniform apex stress-point structuring, and sealed UV top-coat cure.
+              </p>
+              <div class="dashboard-log-card-footer small">
+                <span class="text-muted-luxury">Score: 96 / 100</span>
+                <strong class="text-gold">A+ Distinction</strong>
+              </div>
+            </article>
           </div>
 
           <div class="col-md-6 col-xl-4">
-            <div class="dashboard-gallery-card">
-              <div class="gallery-card ratio-portrait" tabindex="0" role="button"
-                   data-title="Log #214 — Ultrasonic &amp; LED Barrier Therapy (Grade: A)"
-                   data-meta="Dermal Science Lab • 22 Hours Logged"
-                   data-full="https://images.pexels.com/photos/3997993/pexels-photo-3997993.jpeg?auto=compress&cs=tinysrgb&w=1400">
-                <img src="https://images.pexels.com/photos/3997993/pexels-photo-3997993.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Ultrasonic skin therapy practical log">
-              </div>
-              <div class="p-3 d-flex justify-content-between align-items-center">
-                <div>
-                  <strong class="d-block font-serif fs-5">Log #214 — Ultrasonic Facial</strong>
-                  <span class="small text-muted-luxury">22 Hrs &bull; Grade: A Verified</span>
-                </div>
+            <article class="dashboard-log-card">
+              <div class="d-flex justify-content-between align-items-center mb-3">
+                <span class="badge bg-beige text-gold border" style="border-color: var(--border-gold) !important;">Log #214 &bull; Grade: A</span>
                 <button type="button" class="favorite-heart-btn" aria-label="Shortlist practical log">
                   <i class="bi bi-heart"></i>
                 </button>
               </div>
-            </div>
+              <span class="small text-gold text-uppercase fw-semibold mb-1" style="letter-spacing: 0.12em; font-size: 0.68rem;">Dermal Science Lab &bull; 22 Hours</span>
+              <h3 class="h4 font-serif mb-2">Ultrasonic &amp; LED Barrier Therapy</h3>
+              <p class="small text-secondary-luxury log-notes mb-3">
+                Examiner Notes: Safe frequency calibration across sensitive rosacea-prone test subjects paired with soothing peptide serum ultrasound infusion.
+              </p>
+              <div class="dashboard-log-card-footer small">
+                <span class="text-muted-luxury">Score: 95 / 100</span>
+                <strong class="text-gold">Faculty Verified</strong>
+              </div>
+            </article>
           </div>
         </div>
       </section>
@@ -532,42 +566,46 @@
 
           <div class="col-12 col-xl-4">
             <div class="dashboard-stat-card p-4">
+              <span class="eyebrow">Credential Verification</span>
               <h3 class="h4 font-serif mb-3">Global QR Certificate Verification</h3>
-              <div class="photo-frame ratio-landscape mb-3">
-                <img src="https://images.pexels.com/photos/2113855/pexels-photo-2113855.jpeg?auto=compress&cs=tinysrgb&w=700" alt="Aurelia Academy pro makeup vanity and certification seal">
-              </div>
-              <p class="small text-secondary-luxury mb-0">
+              <p class="small text-secondary-luxury mb-3">
                 Every certificate issued by Aurelia Academy features a unique cryptographic QR code and embossed gold seal, allowing luxury salons, medical spas, and international licensing boards to verify your logged practical hours instantly.
               </p>
+
+              <div class="p-3 bg-ivory border rounded-1 mb-3" style="border-color: var(--border-subtle) !important;">
+                <div class="d-flex justify-content-between small mb-2 pb-2 border-bottom" style="border-color: var(--border-subtle) !important;">
+                  <span class="text-muted-luxury">Registry Seal ID</span>
+                  <strong class="text-gold">#AA-QR-2026-8841</strong>
+                </div>
+                <div class="d-flex justify-content-between small mb-2 pb-2 border-bottom" style="border-color: var(--border-subtle) !important;">
+                  <span class="text-muted-luxury">Curriculum Standard</span>
+                  <strong>CIDESCO &amp; VTCT Aligned</strong>
+                </div>
+                <div class="d-flex justify-content-between small">
+                  <span class="text-muted-luxury">Logged Hours</span>
+                  <strong>420 / 600 Hrs Verified</strong>
+                </div>
+              </div>
+
+              <ul class="small text-secondary-luxury d-grid gap-2 mb-0">
+                <li class="d-flex align-items-start gap-2">
+                  <i class="bi bi-check2-circle text-gold mt-1"></i>
+                  <span>Instant employer verification via digital QR transcript URL.</span>
+                </li>
+                <li class="d-flex align-items-start gap-2">
+                  <i class="bi bi-check2-circle text-gold mt-1"></i>
+                  <span>Signed by Principal Examiner Aurelia Varma (ISO 9001:2015).</span>
+                </li>
+                <li class="d-flex align-items-start gap-2">
+                  <i class="bi bi-check2-circle text-gold mt-1"></i>
+                  <span>Eligible for international MEA &amp; UAE DHA apostille attestation.</span>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
       </section>
     </main>
-  </div>
-
-  <!-- Lightbox Modal for Dashboard Practical Log Preview -->
-  <div id="studioLightbox" class="studio-lightbox" role="dialog" aria-modal="true" aria-hidden="true" aria-label="Image Lightbox">
-    <button type="button" id="lightboxClose" class="lightbox-close" aria-label="Close lightbox">
-      <i class="bi bi-x-lg"></i>
-    </button>
-    <button type="button" id="lightboxPrev" class="lightbox-nav lightbox-prev" aria-label="Previous image">
-      <i class="bi bi-chevron-left"></i>
-    </button>
-    <button type="button" id="lightboxNext" class="lightbox-nav lightbox-next" aria-label="Next image">
-      <i class="bi bi-chevron-right"></i>
-    </button>
-
-    <div class="lightbox-inner">
-      <div class="lightbox-img-container">
-        <img id="lightboxImage" src="" alt="Expanded student practical work">
-      </div>
-      <div class="lightbox-caption-bar">
-        <span id="lightboxMeta" class="d-block small text-uppercase text-gold mb-1" style="letter-spacing: 0.16em; font-size: 0.7rem;"></span>
-        <h3 id="lightboxTitle" class="h3 font-serif text-white mb-1"></h3>
-        <span id="lightboxCounter" class="small opacity-75"></span>
-      </div>
-    </div>
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
